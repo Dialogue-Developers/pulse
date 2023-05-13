@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
 					const completion = await openai.createCompletion({
 						model: "text-davinci-003",
 						prompt:
-							"The following is a conversation with an AI assistant called Chatterbox. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Dialogue Developers. How can I help you today?\nHuman: " +
+							"The following is a conversation with an AI health assistant called Pulse that can diagnose user diseases based on symptoms that the user is having. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you today?\nAI: I am an AI created by Dialogue Developers. How can I help you today?\nHuman: " +
 							data.question +
 							"\nAI:",
 						temperature: 0.6,
