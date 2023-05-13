@@ -72,12 +72,10 @@
 			]
 		},
 		{
-			"keyword": ["symptoms", "problem", "issue", "trouble", "feeling"],
+			"keyword": ["symptoms", "problem", "issue"],
 			"responses": [
 				"What symptoms are you experiencing?",
-				"Can you describe your symptoms?",
-				"When did your symptoms start?",
-				"Have you experienced these symptoms before?"
+				"Can you describe your symptoms?"
 			]
 		},
 		{
