@@ -1,0 +1,42 @@
+{
+    "greetings": [
+      "Hello! How can I assist you today?",
+      "Welcome to our healthcare chatbot. What can I help you with?",
+      "Hi there. How can I be of assistance?",
+      "Good day! How may I assist you today?"
+    ],
+    "goodbyes": [
+      "Goodbye. Take care!",
+      "It was a pleasure assisting you. Have a great day!",
+      "Thank you for using our healthcare chatbot. Goodbye!",
+      "Stay healthy and have a great day!"
+    ],
+    "thanks": [
+      "You're welcome. Is there anything else I can assist you with?",
+      "Glad I could help. Do you have any other questions?",
+      "No problem. Let me know if you need any further assistance.",
+      "Anytime. Don't hesitate to reach out if you need help in the future."
+    ],
+    "symptoms": [
+      "What symptoms are you experiencing?",
+      "Can you describe your symptoms?",
+      "When did your symptoms start?",
+      "Have you experienced these symptoms before?"
+    ],
+    "diagnosis": [
+      "Based on your symptoms, it is possible that you have [diagnosis].",
+      "It's difficult to say without further examination, but it's possible that you have [diagnosis].",
+      "I recommend that you see a healthcare professional for an accurate diagnosis."
+    ],
+    "treatment": [
+      "Treatment for [diagnosis] may include [treatment options].",
+      "Your healthcare professional may recommend [treatment options] to manage your [diagnosis].",
+      "It's important to follow your healthcare professional's recommended treatment plan."
+    ],
+    "appointment": [
+      "I recommend that you schedule an appointment with a healthcare professional as soon as possible.",
+      "It's important to see a healthcare professional for further evaluation. Would you like me to help you find a healthcare provider?",
+      "I suggest that you make an appointment with a healthcare professional. Do you need assistance finding a provider?"
+    ]
+  }
+  
