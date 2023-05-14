@@ -51,7 +51,8 @@
 				"Welcome to our healthcare chatbot. What can I help you with?",
 				"Hi there. How can I be of assistance?",
 				"Good day! How may I assist you today?"
-			]
+			],
+			"do_next": null
 		},
 		{
 			"keyword": ["goodbye", "bye", "take care", "farewell", "see you", "so long"],
@@ -60,31 +61,62 @@
 				"It was a pleasure assisting you. Have a great day!",
 				"Thank you for using our healthcare chatbot. Goodbye!",
 				"Stay healthy and have a great day!"
-			]
+			],
+			"do_next": null
 		},
 		{
-			"keyword": ["thank", "thanks", "thank you", "grateful", "appreciate"],
+			"keyword": ["thank", "thanks", "thank you", "grateful", "appreciate", "gratitude"],
 			"responses": [
-				"You're welcome. Is there anything else I can assist you with?",
-				"Glad I could help. Do you have any other questions?",
 				"No problem. Let me know if you need any further assistance.",
 				"Anytime. Don't hesitate to reach out if you need help in the future."
-			]
+			],
+			"do_next": null
 		},
 		{
-			"keyword": ["symptoms", "problem", "issue"],
+			"keyword": [
+				"symptoms",
+				"problem",
+				"issue",
+				"concern",
+				"feeling",
+				"pain",
+				"ache",
+				"hurt",
+				"sick",
+				"ill",
+				"unwell",
+				"unhealthy",
+				"uncomfortable",
+				"unpleasant",
+				"bad",
+				"worse",
+				"terrible",
+				"awful",
+				"horrible",
+				"painful",
+				"sore",
+				"suffering",
+				"suffer",
+				"discomfort",
+				"discomforting",
+				"unpleasant",
+				"unpleasantness",
+				"uncomfortable",
+				"uncomfortableness",
+				"uncomfort",
+				"diagnose",
+				"diagnosis",
+				"condition",
+				"disease",
+				"illness"
+			],
 			"responses": [
-				"What symptoms are you experiencing?",
-				"Can you describe your symptoms?"
-			]
-		},
-		{
-			"keyword": ["diagnose", "diagnosis", "condition", "disease", "illness"],
-			"responses": [
-				"Based on your symptoms, it is possible that you have [diagnosis].",
-				"It's difficult to say without further examination, but it's possible that you have [diagnosis].",
-				"I recommend that you see a healthcare professional for an accurate diagnosis."
-			]
+				"Let me initiate a diagnosis session for you. What symptoms are you experiencing?",
+				"Let me look into that. Can you describe your symptoms please?",
+				"Let's see what we can do. What symptoms are you experiencing?",
+				"Let me see if I can help. What symptoms are you experiencing?"
+			],
+			"do_next": "diagnose"
 		},
 		{
 			"keyword": ["treat", "treatment", "manage", "therapy", "care"],
@@ -92,7 +124,8 @@
 				"Treatment for [diagnosis] may include [treatment options].",
 				"Your healthcare professional may recommend [treatment options] to manage your [diagnosis].",
 				"It's important to follow your healthcare professional's recommended treatment plan."
-			]
+			],
+			"do_next": null
 		},
 		{
 			"keyword": ["appointment", "schedule", "doctor", "provider", "visit"],
@@ -100,7 +133,8 @@
 				"I recommend that you schedule an appointment with a healthcare professional as soon as possible.",
 				"It's important to see a healthcare professional for further evaluation. Would you like me to help you find a healthcare provider?",
 				"I suggest that you make an appointment with a healthcare professional. Do you need assistance finding a provider?"
-			]
+			],
+			"do_next": null
 		},
 		{
 			"keyword": ["emergency", "urgent", "help", "critical", "serious"],
@@ -108,7 +142,8 @@
 				"If you are experiencing a medical emergency, please call your local emergency helpline immediately.",
 				"In case of a medical emergency, it's crucial to seek immediate medical assistance by calling emergency services.",
 				"If you believe you're facing a medical emergency, please contact emergency services without delay."
-			]
+			],
+			"do_next": null
 		},
 		{
 			"keyword": ["medication", "medicine", "drug", "prescription", "pharmacy"],
@@ -116,7 +151,8 @@
 				"It's important to consult a healthcare professional or pharmacist for information about specific medications.",
 				"When it comes to medications, it's best to consult with a healthcare provider who can provide accurate information based on your specific needs.",
 				"For detailed information about medications, consult a healthcare professional or refer to the medication's official documentation."
-			]
+			],
+			"do_next": null
 		},
 		{
 			"keyword": ["allergies", "allergic", "sensitivity", "intolerance", "react"],
@@ -124,7 +160,8 @@
 				"Do you have any known allergies?",
 				"Have you experienced any allergic reactions in the past?",
 				"It's important to be aware of any allergies or sensitivities you may have. Are you currently experiencing any symptoms?"
-			]
+			],
+			"do_next": "diagnose"
 		},
 		{
 			"keyword": ["nutrition", "diet", "eating", "food", "nutrients"],
@@ -132,7 +169,8 @@
 				"Nutrition plays a crucial role in maintaining good health. Are you seeking information on a specific dietary concern?",
 				"Proper nutrition is essential for overall well-being. Do you have any questions regarding a balanced diet?",
 				"A healthy diet is important for optimal health. Is there something specific you would like to know about nutrition?"
-			]
+			],
+			"do_next": "provide_nutrition_info"
 		},
 		{
 			"keyword": ["exercise", "fitness", "workout", "physical activity", "active"],
@@ -140,7 +178,8 @@
 				"Physical activity is beneficial for maintaining a healthy lifestyle. How can I assist you with exercise-related inquiries?",
 				"Regular exercise has numerous health benefits. Do you need guidance or information on a specific exercise routine?",
 				"Staying active is important for your well-being. How can I help you with your fitness-related questions?"
-			]
+			],
+			"do_next": "provide_exercise_info"
 		},
 		{
 			"keyword": ["mental health", "stress", "anxiety", "depression", "well-being"],
@@ -148,7 +187,8 @@
 				"Mental health is vital for overall wellness. If you're experiencing difficulties, I recommend seeking support from a mental health professional.",
 				"Taking care of your mental health is essential. Are you looking for information on managing stress or specific mental health conditions?",
 				"If you're struggling with your mental health, I encourage you to reach out to a mental health provider who can offer guidance and support."
-			]
+			],
+			"do_next": "provide_mental_health_info"
 		}
 	]
 }

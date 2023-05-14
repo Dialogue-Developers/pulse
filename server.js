@@ -3,17 +3,26 @@ import express from "express";
 import dotenv from "dotenv";
 import { Server } from "socket.io";
 import { createServer } from "http";
+import { LocalStorage } from "node-localstorage";
+
+// Our imports
 import { pulseEngine } from "./pulse-engine.js";
+
+// Set up local storage
+global.localStorage = new LocalStorage("./scratch");
 
 dotenv.config();
 
+// OpenAI API
 const configuration = new Configuration({
 	apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
+// Express
 const app = express();
 
+// Socket.io
 const server = createServer(app);
 const io = new Server(server, {
 	cors: {
@@ -35,6 +44,7 @@ io.on("connection", (socket) => {
 
 		console.log(`QUESTION (${socket.id}) [${data.engine}]: ${data.question}`);
 
+		// OpenAI Engine
 		if (data.engine == "openai") {
 			(async () => {
 				try {
@@ -55,18 +65,13 @@ io.on("connection", (socket) => {
 					console.log(error);
 				}
 			})();
+
+		// Pulse Engine
 		} else if (data.engine == "pulse") {
-			(async () => {
-				try {
-					const answer = await pulseEngine(data.question);
-
-					console.log(`ANSWER (${socket.id}): ${answer}`);
-
-					socket.emit("answer", answer);
-				} catch (error) {
-					console.log(error);
-				}
-			})();
+			pulseEngine(data.question, socket.id).then((response) => {
+				console.log(`ANSWER (${socket.id}): ${response}`);
+				socket.emit("answer", response);
+			});
 		}
 	});
 });
