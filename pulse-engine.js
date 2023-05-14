@@ -1,16 +1,13 @@
 import { keywordSpotter } from "./keyword-spotter.js";
 import { fallbackOptions } from "./fallback-options.js";
 
+function clearLocalStorage() {
+	localStorage.removeItem("pulse-engine");
+}
+
 function diagnoseUser(message) {
+	clearLocalStorage();
 	return "I think you have a problem, but I'm not a doctor so I can't help you.";
-}
-
-function provideNutritionInfo(message) {
-	return "You should eat more fruits and vegetables.";
-}
-
-function provideExerciseInfo(message) {
-	return "You should exercise more.";
 }
 
 export async function pulseEngine(message, user_id) {
@@ -22,10 +19,6 @@ export async function pulseEngine(message, user_id) {
 		switch (do_next) {
 			case "diagnose":
 				return diagnoseUser(message);
-			case "provide_nutrition_info":
-				return provideNutritionInfo(message);
-			case "provide_exercise_info":
-				return provideExerciseInfo(message);
 			case "null":
 				break;
 		}

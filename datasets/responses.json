@@ -170,7 +170,7 @@
 				"Proper nutrition is essential for overall well-being. Do you have any questions regarding a balanced diet?",
 				"A healthy diet is important for optimal health. Is there something specific you would like to know about nutrition?"
 			],
-			"do_next": "provide_nutrition_info"
+			"do_next": null
 		},
 		{
 			"keyword": ["exercise", "fitness", "workout", "physical activity", "active"],
@@ -179,7 +179,7 @@
 				"Regular exercise has numerous health benefits. Do you need guidance or information on a specific exercise routine?",
 				"Staying active is important for your well-being. How can I help you with your fitness-related questions?"
 			],
-			"do_next": "provide_exercise_info"
+			"do_next": null
 		},
 		{
 			"keyword": ["mental health", "stress", "anxiety", "depression", "well-being"],
@@ -188,7 +188,7 @@
 				"Taking care of your mental health is essential. Are you looking for information on managing stress or specific mental health conditions?",
 				"If you're struggling with your mental health, I encourage you to reach out to a mental health provider who can offer guidance and support."
 			],
-			"do_next": "provide_mental_health_info"
+			"do_next": null
 		}
 	]
 }
