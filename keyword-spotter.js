@@ -32,13 +32,12 @@ export async function keywordSpotter(message) {
 		const responseMap = {};
 		responses.forEach((response_object) => {
 			response_object.keyword.forEach((keyword) => {
-				const keywordLower = keyword.toLowerCase();
-				if (!responseMap[keywordLower]) {
-					responseMap[keywordLower] = {
-						responses: response_object.responses,
-						do_next: response_object.do_next
-					};
-				}
+				words.forEach((word) => {
+					if (word.toLowerCase() == keyword.toLowerCase()) {
+						response = response_object.responses[Math.floor(Math.random() * response_object.responses.length)];
+						do_next = response_object.do_next;
+					}
+				});
 			});
 		});
 		for (const word of words) {
