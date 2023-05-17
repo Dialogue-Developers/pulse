@@ -1,9 +1,7 @@
 const fs = require('fs');
 
-
-
 export function diagnoseSystem(message) {
-    const symptomKeywords = require('./symptomKeywords.json');
+    const symptomKeywords = require('./dataset/diseases.json');
 
 
     const mentionedSymptoms = [];
@@ -18,6 +16,5 @@ export function diagnoseSystem(message) {
     }
     }
 
-    // Save mentioned symptoms to JSON file
-    fs.writeFileSync('diagnose_system.json', JSON.stringify(mentionedSymptoms));
+   
 }
