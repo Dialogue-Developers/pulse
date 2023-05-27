@@ -46,8 +46,14 @@ async function detectSymptoms(message) {
 	return symptoms;
 }
 
+async function detectDisease(symptoms) {
+}
+
 export async function diagnoseSystem(message) {
 	console.log("Diagnose system");
 	let symptoms = await detectSymptoms(message);
 	console.log(symptoms);
+
+	let disease = await detectDisease(symptoms);
+	console.log(disease);
 }
