@@ -1,13 +1,28 @@
 import { keywordSpotter } from "./keyword-spotter.js";
 import { fallbackOptions } from "./fallback-options.js";
+import { diagnoseSystem } from "./diagnose-system.js";
+
+// To allow the use of require
+import { createRequire } from "module";
+// Load dataset
+export async function loadDataset(path) {
+	const require = createRequire(import.meta.url);
+
+	const fs = require("fs");
+
+	return new Promise((resolve, reject) => {
+		fs.readFile(path, (err, data) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(JSON.parse(data));
+			}
+		});
+	});
+}
 
 function clearLocalStorage() {
 	localStorage.removeItem("pulse-engine");
-}
-
-function diagnoseUser(message) {
-	clearLocalStorage();
-	return "I think you have a problem, but I'm not a doctor so I can't help you.";
 }
 
 export async function pulseEngine(message, user_id) {
@@ -18,7 +33,12 @@ export async function pulseEngine(message, user_id) {
 		localStorage.removeItem("pulse-engine");
 		switch (do_next) {
 			case "diagnose":
-				return diagnoseUser(message);
+				return diagnoseSystem(message).then((response_object) => {
+					// Check if response is null
+					if (response_object == null) {
+						return fallbackOptions("null");
+					}
+				});
 			case "null":
 				break;
 		}

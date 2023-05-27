@@ -1,21 +1,4 @@
-// To allow the use of require
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
-const fs = require("fs");
-
-// Load dataset
-async function loadDataset(path) {
-	return new Promise((resolve, reject) => {
-		fs.readFile(path, (err, data) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve(JSON.parse(data));
-			}
-		});
-	});
-}
+import { loadDataset } from "./pulse-engine.js";
 
 export async function keywordSpotter(message) {
 	// Load the dataset
@@ -23,7 +6,7 @@ export async function keywordSpotter(message) {
 		const responses = dataset.responses; // Responses to keywords
 
 		// Split the message into words, and remove punctuation
-		const words = message.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
+		const words = message.toLowerCase().replace(/[.,\/#!$%?\^&\*;:{}=\-_`~()]/g, "").split(" ");
 
 		// Perform keyword search on the message
 		let response = null;
