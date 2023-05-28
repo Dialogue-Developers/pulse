@@ -47,7 +47,35 @@ async function detectSymptoms(message) {
 }
 
 async function detectDisease(symptoms) {
+    const diseases = await loadDataset("./datasets/diseases.json").then((dataset) => {
+        let diseases = [];
+        for (const disease in dataset.diseases) {
+            let diseaseSymptoms = dataset.diseases[disease];
+            let matches = 0;
+            for (const symptom of symptoms) {
+                if (Array.isArray(diseaseSymptoms) && diseaseSymptoms.includes(symptom)) {
+                    matches++;
+                }
+            }
+            if (matches > 0) {
+                diseases.push({
+                    name: disease,
+                    matches: matches,
+                });
+            }
+        }
+
+        // Sort by matches
+        diseases.sort((a, b) => {
+            return b.matches - a.matches;
+        });
+
+        return diseases;
+    });
+
+    return diseases;
 }
+
 
 export async function diagnoseSystem(message) {
 	console.log("Diagnose system");
