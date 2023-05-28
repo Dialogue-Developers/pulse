@@ -189,6 +189,119 @@
 				"If you're struggling with your mental health, I encourage you to reach out to a mental health provider who can offer guidance and support."
 			],
 			"do_next": null
+		},
+		{
+			"keyword": ["self-care", "relaxation", "mindfulness", "burnout", "emotional well-being"],
+			"responses": [
+				"Practicing self-care and relaxation techniques can greatly contribute to your emotional well-being. Remember to take time for yourself and engage in activities that bring you joy and help you recharge.",
+				"If you're feeling overwhelmed or experiencing burnout, it's important to prioritize self-care. Engaging in mindfulness exercises and seeking support from loved ones can also be beneficial.",
+				"Taking care of your emotional well-being is crucial. Consider incorporating self-care practices into your daily routine to promote a healthier mindset and prevent burnout."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["therapy", "counseling", "psychologist", "mental health support"],
+			"responses": [
+				"If you're seeking mental health support, therapy can be an excellent option. Consider reaching out to a licensed psychologist or counselor who can provide professional guidance and assistance.",
+				"Therapy or counseling can be a valuable resource for improving your mental health. It's important to find a qualified professional who can help you navigate your concerns and develop effective coping strategies.",
+				"Seeking help from a mental health professional, such as a therapist or counselor, can make a significant difference in managing your mental health. They can provide support and offer techniques to enhance your well-being."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["positive psychology", "happiness", "gratitude", "optimism"],
+			"responses": [
+				"Positive psychology focuses on promoting happiness and well-being. Incorporating practices such as expressing gratitude and cultivating optimism can contribute to your overall mental wellness.",
+				"Exploring the principles of positive psychology can help improve your mental health. Embracing gratitude and fostering optimism are strategies that can enhance your well-being and overall satisfaction with life.",
+				"Positive psychology emphasizes the importance of cultivating happiness and well-being. Incorporating gratitude practices and adopting an optimistic mindset can have a positive impact on your mental health."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["stress management", "work-life balance", "relaxation techniques"],
+			"responses": [
+				"Managing stress and maintaining a healthy work-life balance are essential for your mental well-being. Incorporating relaxation techniques, such as deep breathing or meditation, can help reduce stress levels.",
+				"Finding effective ways to manage stress is crucial for your overall mental health. Consider implementing relaxation techniques into your routine and creating a healthy work-life balance to support your well-being.",
+				"Balancing your work and personal life is important for managing stress and promoting mental well-being. Explore relaxation techniques like mindfulness or yoga to help alleviate stress."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["social support", "loneliness", "friendship", "relationships"],
+			"responses": [
+				"Maintaining strong social connections and seeking social support is vital for your mental health. Reach out to friends or loved ones when you're feeling lonely or in need of support.",
+				"Building and nurturing relationships can positively impact your mental well-being. If you're experiencing loneliness, consider reaching out to friends, joining social groups, or seeking support from a therapist.",
+				"Having a strong support system and meaningful relationships can contribute to your mental well-being. Don't hesitate to lean on your friends or family when you need someone to talk to or seek professional help if needed."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["self-esteem", "self-confidence", "self-acceptance"],
+			"responses": [
+				"Cultivating self-esteem and self-confidence is crucial for your mental well-being. Remember to practice self-compassion, embrace your strengths, and celebrate your achievements.",
+				"Developing a healthy sense of self-esteem and self-confidence can positively impact your mental health. Focus on your positive qualities and engage in activities that boost your self-worth.",
+				"Building self-esteem and self-acceptance is an important aspect of your mental well-being. Practice self-care, surround yourself with positive influences, and challenge self-critical thoughts."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["healthy eating", "nutrition", "balanced diet"],
+			"responses": [
+				"Maintaining a healthy diet and balanced nutrition is essential for overall well-being. Remember to incorporate a variety of fruits, vegetables, whole grains, and lean proteins into your meals.",
+				"Nutrition plays a crucial role in your overall health. Aim for a balanced diet that includes a mix of macronutrients and micronutrients to support your body's needs.",
+				"Eating a healthy, balanced diet can contribute to your well-being. Focus on consuming nutrient-dense foods and staying hydrated to nourish your body."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["physical exercise", "fitness", "active lifestyle"],
+			"responses": [
+				"Incorporating regular physical exercise into your routine is beneficial for your overall well-being. Engage in activities you enjoy, such as walking, cycling, or dancing, to stay active.",
+				"Physical exercise is not only good for your physical health but also for your mental well-being. Find activities that you enjoy and make them a part of your regular routine.",
+				"Leading an active lifestyle through regular exercise can contribute to your overall well-being. Consider finding activities that you find enjoyable and that keep you physically active."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["sleep hygiene", "restful sleep", "bedtime routine"],
+			"responses": [
+				"Establishing good sleep hygiene practices is important for your overall well-being. Create a relaxing bedtime routine, ensure a comfortable sleep environment, and aim for the recommended hours of sleep.",
+				"Getting sufficient restful sleep is essential for your well-being. Practice good sleep hygiene by maintaining a consistent sleep schedule and creating a calming bedtime routine.",
+				"Prioritizing quality sleep is crucial for your overall health. Focus on developing a relaxing bedtime routine, maintaining a comfortable sleep environment, and adhering to a regular sleep schedule."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["medical history", "family medical history", "allergies"],
+			"responses": [
+				"When providing your medical history, it's important to be thorough and accurate. This information helps healthcare professionals understand your health background and make informed decisions about your care.",
+				"Your medical history and family medical history are valuable for healthcare professionals in assessing your health. Make sure to provide complete and up-to-date information to ensure optimal care.",
+				"I'm here to assist, but it's crucial to provide your medical history and family medical history to a healthcare professional. This information helps them evaluate potential risks, allergies, and genetic factors that may impact your health."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["medical conditions", "disease management", "lifestyle changes"],
+			"responses": [
+				"If you have specific medical conditions, it's crucial to work closely with a healthcare professional for proper disease management. They can guide you on lifestyle changes, treatment options, and monitoring strategies.",
+				"I'm an AI bot and not a medical professional. It's important to consult a healthcare provider who can provide personalized guidance on managing your medical conditions. They can recommend lifestyle changes and treatment plans tailored to your specific needs.",
+				"Managing medical conditions requires individualized care. While I can provide general information, it's essential to consult a healthcare professional for guidance on disease management, including lifestyle changes and treatment options."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["prevention", "screening tests", "vaccinations"],
+			"responses": [
+				"Preventive measures, such as regular screening tests and vaccinations, are crucial for maintaining good health. Consult a healthcare professional to determine which screenings and vaccinations are recommended for you based on your age, gender, and medical history.",
+				"Prevention is key to staying healthy. Talk to a healthcare provider about recommended screening tests and vaccinations based on your individual needs. They can help you develop a preventive healthcare plan.",
+				"Preventive healthcare plays a vital role in maintaining wellness. Consult a healthcare professional to discuss appropriate screening tests and vaccinations for early detection and prevention of diseases."
+			],
+			"do_next": null
 		}
+		
+		
+		
+						
+		
 	]
 }
