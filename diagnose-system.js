@@ -1,28 +1,3 @@
-/*
-"symptoms": {
-		"itching": ["itching", "itch", "itchy", "itchiness", "itches"],
-		"skin_rash": ["skin rash", "rash", "skinrash", "skinrashes", "rashes"],
-		"nodal_skin_eruptions": ["nodal skin eruptions", "nodal skin", "nodalskin", "nodal", "skin eruptions", "skineruptions"],
-		"dischromic _patches": ["dischromic patches", "dischromic", "patches", "dischromicpatches"],
-		"continuous_sneezing": ["continuous sneezing", "continuous", "sneezing", "sneeze", "sneezes", "sneezed"],
-		"shivering": ["shivering", "shiver", "shivers", "shivered", "shivering"],
-		"watering_from_eyes": ["watering from eyes", "watering eyes", "eyes watering", "eyes are watering", "eye is watering", "eye water"],
-		"stomach_pain": ["stomach pain", "stomachache", "stomach ache", "stomach pains", "stomachaches", "stomach aches", "stomachpains", "stomach hurts"],
-		"acidity": [
-			"acidity",
-			"acid reflux",
-			"acidreflux",
-			"acid refluxes",
-			"acidrefluxes",
-			"acid refluxed",
-			"acidrefluxed",
-			"stomach burn",
-			"stomach burning",
-			"stomach burns"
-		],
-		...
-*/
-
 import { loadDataset } from "./pulse-engine.js";
 
 async function detectSymptoms(message) {
@@ -50,25 +25,45 @@ async function detectDisease(symptoms) {
     const diseases = await loadDataset("./datasets/diseases.json").then((dataset) => {
         let diseases = [];
         for (const disease in dataset.diseases) {
-            let diseaseSymptoms = dataset.diseases[disease];
-            let matches = 0;
-            for (const symptom of symptoms) {
-                if (Array.isArray(diseaseSymptoms) && diseaseSymptoms.includes(symptom)) {
-                    matches++;
-                }
-            }
-            if (matches > 0) {
-                diseases.push({
-                    name: disease,
-                    matches: matches,
-                });
-            }
+			let diseaseSymptoms = dataset.diseases[disease].symptoms;
+			let diseaseSeverity = dataset.diseases[disease].severity;
+			let score = 0;
+
+			for (const symptom of symptoms) {
+				if (diseaseSymptoms.includes(symptom)) {
+					score++;
+				}
+			}
+
+			if (score > 0) {
+				diseases.push({
+					disease: disease,
+					score: score/diseaseSymptoms.length,
+					severity: diseaseSeverity,
+					description: dataset.diseases[disease].description,
+					precautions: dataset.diseases[disease].precautions
+				});
+			}
         }
 
-        // Sort by matches
-        diseases.sort((a, b) => {
-            return b.matches - a.matches;
-        });
+		// Sort the diseases by score
+		diseases.sort((a, b) => {
+			if (a.score > b.score) {
+				return -1;
+			} else if (a.score < b.score) {
+				return 1;
+			} else {
+				// If the scores are equal, sort by severity
+				if (a.severity < b.severity) {
+					return -1;
+				} else if (a.severity > b.severity) {
+					return 1;
+				} else {
+					// Keep the order the same
+					return 0;
+				}
+			}
+		});
 
         return diseases;
     });
@@ -78,10 +73,11 @@ async function detectDisease(symptoms) {
 
 
 export async function diagnoseSystem(message) {
-	console.log("Diagnose system");
 	let symptoms = await detectSymptoms(message);
 	console.log(symptoms);
 
-	let disease = await detectDisease(symptoms);
-	console.log(disease);
+	let diseases = await detectDisease(symptoms);
+	console.log(diseases);
+
+	return diseases;
 }

@@ -9,7 +9,9 @@ import { LocalStorage } from "node-localstorage";
 import { pulseEngine } from "./pulse-engine.js";
 
 // Set up local storage
-global.localStorage = new LocalStorage("./scratch");
+global.localStorage = new LocalStorage("./temp");
+// Clear the local storage
+global.localStorage.clear();
 
 dotenv.config();
 
@@ -34,10 +36,12 @@ app.use(express.static("public"));
 
 io.on("connection", (socket) => {
 	console.log(`CONNECTED ${socket.id}`);
-
+	
 	socket.on("disconnect", (reason) => {
+		global.localStorage.clear();
 		console.log(`DISCONNECTED ${socket.id}: ${reason}`);
 	});
+	
 
 	socket.on("message", (data) => {
 		data = JSON.parse(JSON.stringify(data));

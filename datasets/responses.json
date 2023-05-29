@@ -62,7 +62,7 @@
 				"Thank you for using our healthcare chatbot. Goodbye!",
 				"Stay healthy and have a great day!"
 			],
-			"do_next": null
+			"do_next": "end_conversation"
 		},
 		{
 			"keyword": ["thank", "thanks", "thank you", "grateful", "appreciate", "gratitude"],
@@ -108,7 +108,9 @@
 				"diagnosis",
 				"condition",
 				"disease",
-				"illness"
+				"illness",
+				"help",
+				"assistance"
 			],
 			"responses": [
 				"Let me initiate a diagnosis session for you. What symptoms are you experiencing?",
@@ -137,7 +139,7 @@
 			"do_next": null
 		},
 		{
-			"keyword": ["emergency", "urgent", "help", "critical", "serious"],
+			"keyword": ["emergency", "urgent", "critical", "serious"],
 			"responses": [
 				"If you are experiencing a medical emergency, please call your local emergency helpline immediately.",
 				"In case of a medical emergency, it's crucial to seek immediate medical assistance by calling emergency services.",
