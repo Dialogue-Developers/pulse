@@ -166,7 +166,7 @@
 			"do_next": "diagnose"
 		},
 		{
-			"keyword": ["nutrition", "diet", "eating", "food", "nutrients"],
+			"keyword": ["nutrition", "diet", "eating", "food"],
 			"responses": [
 				"Nutrition plays a crucial role in maintaining good health. Are you seeking information on a specific dietary concern?",
 				"Proper nutrition is essential for overall well-being. Do you have any questions regarding a balanced diet?",
@@ -195,7 +195,7 @@
 		{
 			"keyword": ["self-care", "relaxation", "mindfulness", "burnout", "emotional well-being"],
 			"responses": [
-				"Practicing self-care and relaxation techniques can greatly contribute to your emotional well-being. Remember to take time for yourself and engage in activities that bring you joy and help you recharge.",
+				"Practicing self-care and relaxation techniques can greatly contribute to your emotional . Remember to take time for yourself and engage in activities that bring you joy and help you recharge.",
 				"If you're feeling overwhelmed or experiencing burnout, it's important to prioritize self-care. Engaging in mindfulness exercises and seeking support from loved ones can also be beneficial.",
 				"Taking care of your emotional well-being is crucial. Consider incorporating self-care practices into your daily routine to promote a healthier mindset and prevent burnout."
 			],
@@ -247,7 +247,7 @@
 			"do_next": null
 		},
 		{
-			"keyword": ["healthy eating", "nutrition", "balanced diet"],
+			"keyword": ["healthy eating", "nutrition"],
 			"responses": [
 				"Maintaining a healthy diet and balanced nutrition is essential for overall well-being. Remember to incorporate a variety of fruits, vegetables, whole grains, and lean proteins into your meals.",
 				"Nutrition plays a crucial role in your overall health. Aim for a balanced diet that includes a mix of macronutrients and micronutrients to support your body's needs.",
@@ -274,7 +274,7 @@
 			"do_next": null
 		},
 		{
-			"keyword": ["medical history", "family medical history", "allergies"],
+			"keyword": ["medical history", "family medical history"],
 			"responses": [
 				"When providing your medical history, it's important to be thorough and accurate. This information helps healthcare professionals understand your health background and make informed decisions about your care.",
 				"Your medical history and family medical history are valuable for healthcare professionals in assessing your health. Make sure to provide complete and up-to-date information to ensure optimal care.",
@@ -299,11 +299,306 @@
 				"Preventive healthcare plays a vital role in maintaining wellness. Consult a healthcare professional to discuss appropriate screening tests and vaccinations for early detection and prevention of diseases."
 			],
 			"do_next": null
+		},
+		{
+			"keyword": ["consultation", "advice", "guidance", "expert opinion"],
+			"responses": [
+				"I recommend seeking a consultation with a healthcare professional for personalized advice and guidance.",
+				"It's important to consult with a healthcare professional who can provide expert opinion and guidance based on your specific needs. Would you like me to help you find a healthcare provider?",
+				"I suggest scheduling a consultation with a healthcare professional to receive tailored advice and guidance. Do you need assistance finding a provider?"
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["tests", "medical evaluation"],
+			"responses": [
+				"If you suspect a specific disease, it's important to undergo proper medical evaluation and diagnostic tests. Consult a healthcare professional who can assess your symptoms and order appropriate tests for an accurate diagnosis.",
+				"A proper diagnosis often requires medical evaluation and specific tests. It's crucial to consult a healthcare professional who can assess your condition and recommend appropriate diagnostic procedures.",
+				"I'm an AI bot and cannot provide medical diagnoses. It's important to consult a healthcare professional who can conduct a thorough evaluation and order necessary tests to determine the cause of your symptoms."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["concerned", "worried", "seek help"],
+			"responses": [
+				"If you're concerned or worried about your health, it's important to seek help from a healthcare professional. They can assess your situation and provide appropriate guidance and support.",
+				"I understand that being worried about your health can be stressful. I recommend reaching out to a healthcare provider who can address your concerns and provide expert advice tailored to your needs.",
+				"I'm here to provide support, but it's crucial to consult a healthcare professional when you're concerned or worried about your health. They can offer guidance and reassurance based on your specific situation."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["health check-up", "preventive care"],
+			"responses": [
+				"Regular health check-ups and screening tests are important for preventive care. Consult a healthcare professional to determine which tests are recommended based on your age, gender, and medical history.",
+				"Prioritizing preventive care through regular health check-ups and screening tests is crucial for early detection of potential health issues. Reach out to a healthcare provider to discuss the recommended tests for your age and health status.",
+				"I'm here to provide information, but it's crucial to consult a healthcare professional for personalized guidance on preventive care. They can assess your specific needs and recommend appropriate health check-ups and screening tests."
+			],
+			"do_next": null
+		}, 
+		{
+			"keyword": ["health insurance", "coverage", "claims"],
+			"responses": [
+				"If you have questions about your health insurance coverage or need assistance with claims, it's recommended to contact your insurance provider directly. They can provide detailed information and help address your concerns.",
+				"I'm an AI bot and not affiliated with any specific insurance provider. For questions about your health insurance coverage or claims, it's best to reach out to your insurance company's customer service for accurate information and support.",
+				"I'm here to provide general guidance, but for specific questions about your health insurance coverage or claims, it's advisable to contact your insurance provider directly. They can provide the most up-to-date information tailored to your policy."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["first aid", "basic life support"],
+			"responses": [
+				"Having knowledge of first aid techniques and basic life support can be valuable in emergency situations. Consider taking a certified first aid course or refer to reliable resources for guidance.",
+				"I'm here to offer general information, but it's recommended to receive formal training in first aid and basic life support. Enroll in certified courses or refer to trusted sources for step-by-step instructions in emergency situations.",
+				"In emergencies, it's important to stay calm and take appropriate actions. Consider taking a certified first aid course to learn essential techniques or refer to reputable sources for detailed guidance."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["medical research", "clinical trials", "evidence-based"],
+			"responses": [
+				"Medical research and clinical trials are vital for advancing healthcare. Stay informed about ongoing research and consult reputable sources for evidence-based information on treatments and interventions.",
+				"I'm here to provide information, but it's important to refer to reliable sources for the latest medical research and evidence-based practices. Stay updated with reputable journals and organizations in the field.",
+				"Staying informed about medical research and evidence-based practices is crucial. Refer to reputable sources, academic journals, and trusted healthcare organizations for the latest advancements and treatment guidelines."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["joint pain", "arthritis", "pain management"],
+			"responses": [
+				"If you're experiencing joint pain, it's important to avoid excessive strain on the affected joints and maintain a healthy weight. Applying ice or heat packs, gentle exercises, and over-the-counter pain relievers may offer temporary relief. Consult a healthcare professional for long-term management options.",
+				"I'm an AI bot and not a medical professional. For personalized advice regarding joint pain and arthritis, it's best to consult a healthcare provider who can evaluate your situation and recommend appropriate pain management strategies.",
+				"I'm here to provide general information, but for long-term management of joint pain or arthritis, it's important to consult a healthcare professional. They can assess your specific needs and recommend appropriate treatment options or therapies."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["toothache", "dental pain", "oral hygiene"],
+			"responses": [
+				"If you're experiencing a toothache or dental pain, it's important to maintain good oral hygiene by brushing and flossing regularly. Rinse your mouth with warm saltwater and apply a cold compress to the affected area for temporary relief. Make sure to schedule an appointment with a dentist for proper evaluation and treatment.",
+				"I'm here to offer support, but it's important to consult a dentist if you're experiencing a toothache or dental pain. They can examine your teeth and gums to determine the underlying cause and recommend appropriate treatment options.",
+				"Toothaches and dental pain can be distressing. You can try rinsing your mouth with warm saltwater, applying a cold compress, or taking over-the-counter pain relievers. However, it's crucial to consult a dentist for a proper diagnosis and treatment plan."
+			],
+			"do_next": null
+		},
+		
+		
+		{
+			"keyword": ["postoperative pain", "surgical pain", "pain medication"],
+			"responses": [
+				"If you're experiencing postoperative pain, it's important to follow the pain management plan prescribed by your healthcare provider. This may include the use of prescribed pain medication, applying ice or heat packs, and practicing relaxation techniques. If you have concerns about your pain management, reach out to your healthcare provider for guidance.",
+				"I'm here to offer support, but for postoperative pain management, it's crucial to follow the instructions provided by your healthcare provider. They can prescribe appropriate pain medication and recommend techniques to help manage your pain during the recovery period.",
+				"Postoperative pain is common after surgery. It's important to adhere to the pain management plan provided by your healthcare provider. This may involve taking prescribed pain medication, using ice or heat therapy, and practicing relaxation techniques to help alleviate your discomfort."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["heartburn", "antacids", "acid reflux"],
+			"responses": [
+				"For occasional heartburn or acid reflux, you can try using antacids like Tums or Maalox. These over-the-counter medications can help neutralize stomach acid and provide temporary relief. If you experience persistent or severe symptoms, it's recommended to consult a healthcare professional.",
+				"Antacids are commonly used to relieve occasional heartburn or acid reflux symptoms. They work by neutralizing stomach acid. However, if you have frequent or severe symptoms, it's important to consult a healthcare professional for further evaluation.",
+				"To alleviate occasional heartburn or acid reflux, you can try using antacids such as Tums or Maalox as directed. If your symptoms persist or worsen, it's advisable to consult a healthcare professional for appropriate evaluation and management."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["common cold", "nasal congestion", "decongestants"],
+			"responses": [
+				"For temporary relief of nasal congestion due to the common cold, you can consider using over-the-counter decongestant nasal sprays or oral decongestants like pseudoephedrine. However, it's important to use them according to the recommended dosage and duration, as prolonged use can lead to rebound congestion. If your symptoms persist or worsen, consult a healthcare professional.",
+				"Over-the-counter decongestants like nasal sprays or oral medications can provide temporary relief from nasal congestion caused by the common cold. Follow the recommended dosage and duration to avoid potential side effects. If your symptoms persist or become severe, it's best to consult a healthcare professional.",
+				"If you're experiencing nasal congestion due to the common cold, you can try using over-the-counter decongestants like nasal sprays or oral medications. However, it's important to follow the instructions and avoid prolonged use, as it can lead to dependency or rebound congestion. If your symptoms persist or worsen, consult a healthcare professional."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["minor cuts", "wound care", "antiseptic"],
+			"responses": [
+				"For minor cuts or wounds, it's important to clean the area with mild soap and water, apply an over-the-counter antiseptic solution like hydrogen peroxide or povidone-iodine, and cover the wound with a sterile bandage. If the wound is deep, won't stop bleeding, or shows signs of infection, seek medical attention.",
+				"I'm here to provide general information, but for proper wound care, it's important to clean the area with mild soap and water, apply an over-the-counter antiseptic like hydrogen peroxide or povidone-iodine, and cover it with a sterile bandage. If you have concerns or the wound is severe, it's best to consult a healthcare professional.",
+				"For minor cuts or wounds, you can clean the area with mild soap and water, apply an over-the-counter antiseptic solution like hydrogen peroxide or povidone-iodine, and cover it with a sterile bandage. If the wound doesn't heal properly or shows signs of infection, it's advisable to seek medical attention."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["motion sickness", "nausea", "over-the-counter remedies"],
+			"responses": [
+				"If you experience motion sickness or nausea, there are over-the-counter remedies available, such as dimenhydrinate (Dramamine) or meclizine (Bonine). Follow the instructions on the package. If your symptoms persist or worsen, consult a healthcare professional.",
+				"Over-the-counter remedies like dimenhydrinate (Dramamine) or meclizine (Bonine) can provide relief from motion sickness or nausea. However, it's important to follow the recommended dosage and guidelines. If your symptoms are severe or persist, it's best to consult a healthcare professional.",
+				"If you're prone to motion sickness or experience nausea, you can try using over-the-counter remedies like dimenhydrinate (Dramamine) or meclizine (Bonine) as directed. If your symptoms persist or significantly impact your daily activities, it's advisable to consult a healthcare professional."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["hand hygiene", "handwashing", "soap"],
+			"responses": [
+				"Proper hand hygiene is crucial for preventing the spread of germs. Remember to wash your hands with soap and water for at least 20 seconds, especially before eating, after using the restroom, and after coughing or sneezing. If soap and water are not available, you can use hand sanitizer with at least 60% alcohol.",
+				"Handwashing with soap and water is one of the most effective ways to prevent the spread of germs. Make sure to wash your hands thoroughly for at least 20 seconds, covering all surfaces. If you don't have access to soap and water, use hand sanitizer with at least 60% alcohol content.",
+				"Maintaining good hand hygiene is essential. Wash your hands with soap and water for at least 20 seconds, particularly before eating, after using the restroom, and after being in public places. If soap and water are not accessible, use hand sanitizer containing at least 60% alcohol."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["respiratory etiquette", "coughing", "sneezing"],
+			"responses": [
+				"Practice good respiratory etiquette by covering your mouth and nose with a tissue or your elbow when coughing or sneezing. Dispose of used tissues properly and wash your hands afterward. If a tissue is not available, cough or sneeze into your elbow to prevent the spread of germs.",
+				"To prevent the spread of respiratory infections, cover your mouth and nose with a tissue or your elbow when coughing or sneezing. Dispose of used tissues immediately and wash your hands thoroughly. If you don't have a tissue, use the crook of your elbow to cover your mouth and nose.",
+				"Maintaining good respiratory etiquette is important. When coughing or sneezing, use a tissue or your elbow to cover your mouth and nose. Dispose of used tissues properly and wash your hands afterward. If you don't have a tissue, make sure to cough or sneeze into your elbow."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["brushing", "flossing"],
+			"responses": [
+				"Maintaining good oral hygiene is important for overall health. Brush your teeth at least twice a day using fluoride toothpaste, and don't forget to floss daily to remove plaque and food particles between your teeth. Additionally, visit your dentist regularly for check-ups and professional cleanings.",
+				"Proper oral hygiene practices include brushing your teeth at least twice a day with fluoride toothpaste and flossing daily to remove plaque and prevent gum disease. It's also essential to schedule regular dental check-ups and cleanings to maintain oral health.",
+				"Taking care of your oral hygiene is crucial. Remember to brush your teeth at least twice a day using fluoride toothpaste and clean between your teeth with floss daily. Regular dental visits for check-ups and cleanings are also important for maintaining optimal oral health."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": [ "nutrients", "food groups"],
+			"responses": [
+				"A balanced diet is essential for good health. Make sure to include a variety of nutrient-rich foods from all food groups, such as fruits, vegetables, whole grains, lean proteins, and healthy fats. Remember to stay hydrated and limit the intake of processed foods, sugary drinks, and excessive salt.",
+				"Eating a balanced diet is key to maintaining optimal health. Include a variety of foods from different food groups, such as fruits, vegetables, whole grains, lean proteins, and healthy fats. Stay hydrated and minimize the consumption of processed foods, sugary beverages, and foods high in sodium.",
+				"Opting for a balanced diet is crucial for overall well-being. Incorporate foods from all food groups, including fruits, vegetables, whole grains, lean proteins, and healthy fats. Hydration is also important, so remember to drink plenty of water. Reduce your intake of processed foods, sugary drinks, and foods high in salt."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["portion control", "serving sizes", "balanced meals"],
+			"responses": [
+				"Practicing portion control is important for maintaining a healthy weight. Be mindful of serving sizes and aim for balanced meals with appropriate proportions of proteins, carbohydrates, and vegetables. Eating slowly and paying attention to hunger cues can help prevent overeating.",
+				"Portion control plays a crucial role in maintaining a healthy diet. Be aware of serving sizes and strive for balanced meals that include a mix of proteins, carbohydrates, and vegetables. Practice mindful eating by eating slowly and listening to your body's hunger and fullness cues.",
+				"Maintaining portion control is key to a healthy diet. Pay attention to serving sizes and create balanced meals that consist of proteins, carbohydrates, and vegetables. Eat mindfully, savoring each bite, and stop eating when you feel comfortably satisfied."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["healthy snacking", "nutritious snacks", "smart choices"],
+			"responses": [
+				"Snacking can be part of a healthy diet when you choose nutritious options. Opt for snacks like fresh fruits, vegetables with hummus, Greek yogurt, nuts, or whole-grain crackers. Avoid sugary snacks and prioritize nutrient-dense choices for sustained energy and overall well-being.",
+				"When snacking, make smart choices by opting for nutritious options. Consider snacks like fresh fruits, vegetables with a healthy dip, Greek yogurt, nuts, or whole-grain crackers. Limit the consumption of sugary snacks and choose nutrient-dense alternatives for better energy and health.",
+				"Healthy snacking is an important part of a balanced diet. Choose nutrient-rich snacks such as fresh fruits, vegetables paired with a healthy dip, Greek yogurt, nuts, or whole-grain crackers. Minimize the intake of sugary snacks and focus on wholesome choices for improved nutrition and vitality."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin C", "immune system", "antioxidant"],
+			"responses": [
+				"Vitamin C is an essential nutrient that supports a healthy immune system. It acts as an antioxidant, helping to protect cells from damage. Good sources of vitamin C include citrus fruits, berries, kiwi, broccoli, bell peppers, and tomatoes. Aim to incorporate these foods into your diet regularly.",
+				"Vitamin C is important for a strong immune system and acts as an antioxidant in the body. You can find vitamin C in citrus fruits, berries, kiwi, broccoli, bell peppers, and tomatoes. Including these foods in your diet can help ensure an adequate intake of vitamin C.",
+				"To support your immune system, include foods rich in vitamin C in your diet. Citrus fruits, berries, kiwi, broccoli, bell peppers, and tomatoes are excellent sources of vitamin C. Regular consumption of these foods can help provide the necessary vitamin C for your overall well-being."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin D", "sunlight"],
+			"responses": [
+				"Vitamin D is crucial for bone health as it helps the body absorb calcium. The best source of vitamin D is sunlight, so spending time outdoors can contribute to its production. Additionally, foods like fatty fish, fortified dairy products, and egg yolks can provide dietary vitamin D.",
+				"Vitamin D plays a vital role in bone health by aiding calcium absorption. Sunlight is the best natural source of vitamin D, so spending time outdoors is beneficial. Additionally, include foods like fatty fish, fortified dairy products, and egg yolks in your diet to increase your vitamin D intake.",
+				"Vitamin D is essential for strong bones as it enhances calcium absorption. Sunlight is the primary source of vitamin D, so getting outdoors for some sun exposure is beneficial. Additionally, incorporate foods like fatty fish, fortified dairy products, and egg yolks into your diet to ensure an adequate vitamin D supply."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin B12", "energy", "nerve function"],
+			"responses": [
+				"Vitamin B12 is important for energy production and proper nerve function. It is naturally found in animal products such as meat, fish, eggs, and dairy. If you follow a vegetarian or vegan diet, consider fortified plant-based sources like fortified cereals, nutritional yeast, or B12 supplements.",
+				"Vitamin B12 is crucial for energy production and nerve function. Animal products like meat, fish, eggs, and dairy are good sources of vitamin B12. If you follow a vegetarian or vegan diet, ensure you obtain it from fortified plant-based sources like fortified cereals, nutritional yeast, or B12 supplements.",
+				"To support energy production and maintain proper nerve function, ensure an adequate intake of vitamin B12. Animal-based foods like meat, fish, eggs, and dairy are rich sources of vitamin B12. Vegetarians and vegans can obtain it from fortified plant-based sources like fortified cereals, nutritional yeast, or B12 supplements."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin A", "vision", "immune system"],
+			"responses": [
+				"Vitamin A is crucial for maintaining good vision and a healthy immune system. It can be found in foods like carrots, sweet potatoes, spinach, kale, and eggs. Including these foods in your diet can help ensure an adequate intake of vitamin A.",
+				"Vitamin A is essential for vision and a strong immune system. You can obtain it from foods like carrots, sweet potatoes, spinach, kale, and eggs. Incorporating these foods into your diet regularly can help meet your vitamin A needs.",
+				"To support vision and a healthy immune system, include foods rich in vitamin A in your diet. Carrots, sweet potatoes, spinach, kale, and eggs are excellent sources of vitamin A. Regular consumption of these foods can help provide the necessary vitamin A for your overall well-being."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin E", "antioxidant", "skin health"],
+			"responses": [
+				"Vitamin E is an antioxidant that helps protect cells from damage. It is beneficial for skin health and can be found in foods like almonds, sunflower seeds, spinach, and avocado. Including these foods in your diet can contribute to your vitamin E intake.",
+				"Vitamin E is an antioxidant that plays a role in protecting cells from damage. It promotes skin health and can be found in foods such as almonds, sunflower seeds, spinach, and avocado. Incorporating these foods into your diet can help ensure an adequate intake of vitamin E.",
+				"To support skin health and benefit from its antioxidant properties, include foods rich in vitamin E in your diet. Almonds, sunflower seeds, spinach, and avocado are excellent sources of vitamin E. Regular consumption of these foods can contribute to your overall vitamin E intake."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["vitamin K", "blood clotting"],
+			"responses": [
+				"Vitamin K is important for blood clotting and bone health. It can be found in foods like leafy green vegetables (such as kale, spinach, and broccoli), as well as in certain oils and dairy products. Including these foods in your diet can help ensure an adequate intake of vitamin K.",
+				"Vitamin K is essential for blood clotting and maintaining bone health. Leafy green vegetables like kale, spinach, and broccoli are excellent sources of vitamin K. Some oils and dairy products also contain vitamin K. Incorporating these foods into your diet can help meet your vitamin K needs.",
+				"To support blood clotting and maintain bone health, include foods rich in vitamin K in your diet. Leafy green vegetables such as kale, spinach, and broccoli are great sources of vitamin K. Additionally, certain oils and dairy products contain vitamin K. Regular consumption of these foods can help ensure an adequate intake of vitamin K."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["calcium", "bone health", "dairy"],
+			"responses": [
+				"Calcium is essential for bone health. Dairy products like milk, yogurt, and cheese are excellent sources of calcium. If you follow a vegan diet, consider plant-based sources like tofu, almonds, and leafy green vegetables. Including these foods in your diet can help ensure an adequate intake of calcium.",
+				"Calcium is crucial for bone health. Dairy products like milk, yogurt, and cheese are rich sources of calcium. If you follow a vegan diet, consider plant-based sources like tofu, almonds, and leafy green vegetables. Incorporating these foods into your diet can help meet your calcium needs.",
+				"To support bone health, include foods rich in calcium in your diet. Dairy products like milk, yogurt, and cheese are excellent sources of calcium. If you follow a vegan diet, consider plant-based sources like tofu, almonds, and leafy green vegetables. Regular consumption of these foods can help ensure an adequate intake of calcium."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["iron", "red blood cells", "energy"],
+			"responses": [
+				"Iron is important for the production of red blood cells and energy. Animal products like meat, fish, and poultry are good sources of iron. If you follow a vegetarian or vegan diet, consider plant-based sources like beans, lentils, tofu, and spinach. Including these foods in your diet can help ensure an adequate intake of iron.",
+				"Iron is essential for the production of red blood cells and energy. Animal products like meat, fish, and poultry are rich sources of iron. If you follow a vegetarian or vegan diet, consider plant-based sources like beans, lentils, tofu, and spinach. Incorporating these foods into your diet can help meet your iron needs.",
+				"To support the production of red blood cells and energy, include foods rich in iron in your diet. Animal products like meat, fish, and poultry are excellent sources of iron. If you follow a vegetarian or vegan diet, consider plant-based sources like beans, lentils, tofu, and spinach. Regular consumption of these foods can help ensure an adequate intake of iron."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["bleeding", "wound", "pressure", "clean", "bandage"],
+			"responses": [
+				"If someone is bleeding, apply firm pressure to the wound using a clean cloth or your hand to help control the bleeding. Clean the wound with mild soap and water, then cover it with a sterile bandage. Seek medical attention if the bleeding is severe or doesn't stop.",
+				"In case of bleeding, apply firm pressure to the wound with a clean cloth or your hand to stop the bleeding. Clean the wound with mild soap and water, and then cover it with a sterile bandage. If the bleeding persists or is severe, seek immediate medical attention.",
+				"If someone is bleeding, apply steady pressure to the wound using a clean cloth or your hand to minimize the bleeding. Clean the wound with mild soap and water, and then cover it with a sterile bandage. If the bleeding doesn't subside, seek medical assistance."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["choking", "abdominal thrusts", "back blows"],
+			"responses": [
+				"If someone is choking and unable to breathe, perform abdominal thrusts (Heimlich maneuver) by standing behind them, placing your hands above their navel, and applying inward and upward pressure. Alternatively, if it's an infant, deliver back blows between the shoulder blades. Call emergency services for further assistance.",
+				"If someone is choking and can't breathe, perform abdominal thrusts (Heimlich maneuver) by standing behind them, placing your hands above their navel, and exerting inward and upward pressure. For infants, deliver back blows between the shoulder blades. Contact emergency services for additional help.",
+				"In the event of choking, administer abdominal thrusts (Heimlich maneuver) to someone who can't breathe. Stand behind them, place your hands above their navel, and apply inward and upward pressure. For infants, deliver back blows between the shoulder blades. Call emergency services for further aid."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["burn", "cool water", "clean cloth", "medical attention"],
+			"responses": [
+				"If someone has a burn, cool the affected area with cool (not cold) running water for about 10-20 minutes. Cover the burn with a clean, non-stick cloth or plastic wrap. Seek medical attention if the burn is severe, covers a large area, or is on the face, hands, feet, or genitals.",
+				"In case of a burn, cool the burned area under cool (not cold) running water for 10-20 minutes. Cover the burn with a clean, non-stick cloth or plastic wrap. Consult a healthcare professional if the burn is severe, extensive, or located on sensitive areas like the face, hands, feet, or genitals.",
+				"If someone has a burn, immediately cool the burn under cool (not cold) running water for 10-20 minutes. Cover the burn with a clean, non-stick cloth or plastic wrap. Seek medical attention for severe burns, burns covering a large area, or burns on sensitive body parts like the face, hands, feet, or genitals."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["fracture", "immobilize", "support"],
+			"responses": [
+				"If you suspect a fracture, immobilize the injured area by keeping it as still as possible. You can use a splint or sling to provide support. Avoid moving the person unless necessary. Seek immediate medical attention for a suspected fracture.",
+				"If you think someone has a fracture, immobilize the injured area by keeping it stable and supported. You can use a splint or sling for immobilization. Refrain from moving the person unless it's essential. It's crucial to seek medical attention for a suspected fracture.",
+				"In case of a suspected fracture, immobilize the injured area to minimize movement. Use a splint or sling to provide support. Avoid unnecessary motion and seek immediate medical attention for proper evaluation and treatment."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["nosebleed", "tilt forward", "pinch", "compress"],
+			"responses": [
+				"If someone has a nosebleed, have them gently tilt their head forward to prevent blood from flowing down their throat. Encourage them to pinch their nostrils together and lean forward slightly to help stop the bleeding. Apply gentle pressure by holding their nostrils closed for about 10 minutes. If the bleeding persists, seek medical attention.",
+				"In the case of a nosebleed, instruct the person to tilt their head forward slightly to prevent blood from entering their throat. Ask them to pinch their nostrils together and lean forward to help control the bleeding. Maintain gentle pressure on the nostrils for approximately 10 minutes. If the bleeding continues, it's advisable to seek medical assistance.",
+				"If someone experiences a nosebleed, advise them to tilt their head slightly forward to prevent blood from going down the throat. Instruct them to pinch their nostrils together and lean forward to help stop the bleeding. Apply gentle pressure by holding their nostrils closed for about 10 minutes. Seek medical attention if the bleeding persists."
+			],
+			"do_next": null
 		}
-		
-		
-		
-						
 		
 	]
 }
