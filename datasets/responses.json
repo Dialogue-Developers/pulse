@@ -598,6 +598,173 @@
 				"If someone experiences a nosebleed, advise them to tilt their head slightly forward to prevent blood from going down the throat. Instruct them to pinch their nostrils together and lean forward to help stop the bleeding. Apply gentle pressure by holding their nostrils closed for about 10 minutes. Seek medical attention if the bleeding persists."
 			],
 			"do_next": null
+		},
+		{
+			"keyword": ["allergic reaction", "epinephrine"],
+			"responses": [
+				"If someone is experiencing a severe allergic reaction with symptoms like difficulty breathing, swelling, or hives, administer an epinephrine auto-injector if available. Call emergency services (911) immediately and stay with the person until help arrives. It's important to seek immediate medical attention for a severe allergic reaction.",
+				"In the event of a severe allergic reaction characterized by breathing difficulties, swelling, or hives, administer an epinephrine auto-injector if accessible. Call emergency services (911) immediately and stay with the person until professional help arrives. Seeking prompt medical attention is crucial for a severe allergic reaction.",
+				"If someone exhibits signs of a severe allergic reaction such as difficulty breathing, swelling, or hives, use an epinephrine auto-injector if it's available. Dial emergency services (911) immediately and remain with the person until medical responders arrive. Seeking immediate medical assistance is essential for a severe allergic reaction."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["seizure", "protect", "call 911"],
+			"responses": [
+				"If someone is having a seizure, keep them safe by removing any nearby objects that could cause harm. Cushion their head with a soft object and turn them onto their side to prevent choking. Do not restrain their movements. Once the seizure ends, stay with the person and call emergency services (911) if it's their first seizure or lasts longer than five minutes.",
+				"In case of a seizure, ensure the person's safety by clearing the area of objects that could pose a risk. Place a soft object under their head and gently roll them onto their side to avoid choking. Avoid restraining their movements. After the seizure, stay with the person and dial emergency services (911) if it's their first seizure or lasts longer than five minutes.",
+				"If someone experiences a seizure, prioritize their safety by removing potential hazards from their surroundings. Place something soft under their head and turn them onto their side to prevent choking. Avoid restricting their movements. Once the seizure ends, remain with the person and call emergency services (911) if it's their first seizure or lasts longer than five minutes."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["heat stroke", "cool"],
+			"responses": [
+				"If someone shows signs of heat stroke, move them to a cool place and lower their body temperature. Remove excess clothing, apply cool water to their skin, and use fans or cold packs if available. Call emergency services (911) immediately for a suspected heat stroke.",
+				"In the case of heat stroke, promptly move the person to a cooler location and lower their body temperature. Remove any unnecessary clothing, apply cool water to their skin, and use fans or cold packs if accessible. Call emergency services (911) right away if you suspect a heat stroke.",
+				"If someone exhibits symptoms of heat stroke, relocate them to a cool area and help lower their body temperature. Remove excessive clothing, apply cool water to their skin, and use fans or cold packs if they're accessible. If you suspect heat stroke, call emergency services (911) immediately."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["goodbye", "bye", "farewell"],
+			"responses": [
+				"Goodbye! Take care and have a wonderful day.",
+				"Bye! It was a pleasure assisting you. Have a great day!",
+				"Farewell! If you have any more questions in the future, feel free to ask.",
+				"Goodbye! Thank you for reaching out. Take care!",
+				"Take care and goodbye! If you need any further assistance, don't hesitate to ask."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["see you", "see you later", "until next time"],
+			"responses": [
+				"See you later! Have a fantastic day.",
+				"Until next time! If you need anything else, don't hesitate to reach out.",
+				"Take care, and I'll be here when you need assistance. See you later!",
+				"Goodbye for now! Remember, I'm here to help whenever you need it.",
+				"See you later! Wishing you a great day ahead."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["take care", "have a great day", "stay well"],
+			"responses": [
+				"Take care! If you have any more questions, feel free to ask.",
+				"Have a great day! Remember to take care of yourself.",
+				"Stay well! If there's anything else I can assist you with, please let me know.",
+				"Take care and have a wonderful day ahead!",
+				"Wishing you a great day! Remember, I'm here to help whenever you need."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["information", "details", "specifics"],
+			"responses": [
+				"Could you please provide more information or specifics about your request?",
+				"To assist you better, I'll need some additional details. What specific information are you looking for?",
+				"In order to help you effectively, could you please provide more details or clarify your request?"
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["sorry", "apologize", "my mistake"],
+			"responses": [
+				"I apologize for any inconvenience caused. How can I assist you further?",
+				"I'm sorry if there was any confusion. Please let me know how I can help you.",
+				"I apologize for any misunderstanding. Please provide more details so I can assist you better."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["feedback", "suggestions", "improvements"],
+			"responses": [
+				"We appreciate your feedback! Please let us know how we can improve our services.",
+				"We value your input! Feel free to share any suggestions or feedback you may have.",
+				"Your feedback is important to us! We're always looking for ways to enhance our services."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["confirm", "is that correct", "am I right"],
+			"responses": [
+				"Yes, that's right. You've got it!",
+				"Absolutely! Your understanding is correct."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["out of scope", "not applicable", "not related"],
+			"responses": [
+				"I'm sorry, but that falls outside the scope of my capabilities.",
+				"I'm afraid I can't assist with that particular request.",
+				"I apologize, but the topic you mentioned is not within my area of expertise."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["customer support", "contact", "assistance"],
+			"responses": [
+				"For personalized assistance, please contact our customer support team at wehavenosupport@pulse.com. They'll be happy to help you.",
+				"If you require further assistance, I recommend reaching out to our dedicated customer support team at wehavenosupport@pulse.com. They will be able to assist you.",
+				"To get the specific help you need, please contact our customer support team at wehavenosupport@pulse.com. They will be able to provide you with the necessary assistance."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["may I", "can I", "is it okay"],
+			"responses": [
+				"Of course! Please go ahead and [action/request].",
+				"Yes, you may [action/request]. Feel free to proceed.",
+				"It's absolutely fine. You have permission to [action/request]."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["confidential", "privacy", "secure"],
+			"responses": [
+				"I assure you that your information is kept confidential and secure.",
+				"Your privacy is important to us. We take every measure to ensure the security of your information.",
+				"Rest assured that we maintain strict confidentiality and prioritize the privacy of your data."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["clarify", "can you explain", "please elaborate"],
+			"responses": [
+				"Sure, I'd be happy to clarify. What specific aspect would you like me to explain?",
+				"Of course! I'll be glad to provide more information. Could you please specify what you would like me to elaborate on?",
+				"I'd be happy to help. Can you provide more details or clarify your question so that I can better assist you?"
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["error", "issue", "problem"],
+			"responses": [
+				"I apologize for the inconvenience. Let me investigate the issue and provide a solution.",
+				"I'm sorry to hear that you're experiencing an issue. Let me see how I can assist you in resolving it.",
+				"I understand that you're facing a problem. I'll do my best to help you find a solution."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["permission", "allowed", "authorization"],
+			"responses": [
+				"To proceed, we'll need your permission. Can you please grant us authorization?",
+				"Before proceeding, we kindly ask for your permission. Is it okay to proceed?",
+				"We require your permission to continue. Are you comfortable granting us authorization?"
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["source", "where did you get that", "reference"],
+			"responses": [
+				"The information I provided is from reliable sources. If you'd like, I can share the references with you.",
+				"I gather information from trusted sources to provide accurate answers. Would you like to know more about the references?",
+				"I rely on reputable sources for the information I provide. If you're interested, I can share the references with you."
+			],
+			"do_next": null
 		}
 		
 	]
