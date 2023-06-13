@@ -80,6 +80,6 @@ io.on("connection", (socket) => {
 	});
 });
 
-server.listen(5000, function () {
-	console.log("server started at port 5000");
+server.listen(443, function () {
+	console.log("server started at port 443");
 });
