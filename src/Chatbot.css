@@ -2,7 +2,7 @@
 	width: calc(100% - 20px);
 	max-width: 95%;
 	min-height: 90vh;
-	
+	border-radius: 10px;
 	margin: 30px auto;
 	left: 50%;
 	top: 30%;
@@ -12,4 +12,6 @@
 	overflow: hidden;
 	display: grid;
 	grid-template-rows: max-content auto max-content;
+	border:#e3dcdc solid 3px;
+	border-radius:10px;
 }
