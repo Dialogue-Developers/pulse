@@ -7,12 +7,10 @@ import SimpleForm from './module/form/SimpleForm';
 function App() {
   return (
     <div className="App">
-      <Notifications />
-      <NotificationComponent />
+      
       {/* <SimpleChatBox /> */}
       <SimpleForm />
     </div>
   );
 }
-
 export default App;
