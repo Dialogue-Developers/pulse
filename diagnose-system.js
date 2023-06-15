@@ -74,10 +74,10 @@ async function detectDisease(symptoms) {
 
 export async function diagnoseSystem(message) {
 	let symptoms = await detectSymptoms(message);
-	console.log(symptoms);
+	// console.log(symptoms);
 
 	let diseases = await detectDisease(symptoms);
-	console.log(diseases);
+	// console.log(diseases);
 
 	return diseases;
 }

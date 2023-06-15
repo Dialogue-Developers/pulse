@@ -41,7 +41,8 @@
 		"stress",
 		"anxiety",
 		"depression",
-		"well-being"
+		"well-being",
+		"diagnose"
 	],
 	"responses": [
 		{
@@ -69,6 +70,22 @@
 			"responses": [
 				"No problem. Let me know if you need any further assistance.",
 				"Anytime. Don't hesitate to reach out if you need help in the future."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["ok", "fine", "alright"],
+			"responses": [
+				"Great! Let me know if you need any further assistance.",
+				"Alright. Don't hesitate to reach out if you need help in the future."
+			],
+			"do_next": null
+		},
+		{
+			"keyword": ["able", "abilities", "capability", "capable", "ability"],
+			"responses": [
+				"I can help you with a variety of healthcare-related topics, such as symptoms, diagnosis, treatment, appointment scheduling, medications, allergies, nutrition, exercise, and mental health.",
+				"I can assist you with a variety of healthcare-related topics, such as symptoms, diagnosis, treatment, appointment scheduling, medications, allergies, nutrition, exercise, and mental health."
 			],
 			"do_next": null
 		},
@@ -106,11 +123,7 @@
 				"uncomfort",
 				"diagnose",
 				"diagnosis",
-				"condition",
-				"disease",
-				"illness",
-				"help",
-				"assistance"
+				"condition"
 			],
 			"responses": [
 				"Let me initiate a diagnosis session for you. What symptoms are you experiencing?",
@@ -123,29 +136,29 @@
 		{
 			"keyword": ["treat", "treatment", "manage", "therapy", "care"],
 			"responses": [
-				"Treatment for [diagnosis] may include [treatment options].",
-				"Your healthcare professional may recommend [treatment options] to manage your [diagnosis].",
-				"It's important to follow your healthcare professional's recommended treatment plan."
+				"Treatment options may vary depending on your specific diagnosis. Would you like me to give you some precations?",
+				"Your healthcare professional may recommend a specific treatment plan based on your diagnosis. Would you like me to give you some precations?",
+				"It's important to follow your healthcare professional's recommended treatment plan. Would you like me to give you some precations?"
 			],
-			"do_next": null
+			"do_next": "ask_for_disease_precautions"
 		},
 		{
-			"keyword": ["appointment", "schedule", "doctor", "provider", "visit"],
+			"keyword": ["appointment", "schedule", "provider", "visit"],
 			"responses": [
 				"I recommend that you schedule an appointment with a healthcare professional as soon as possible.",
 				"It's important to see a healthcare professional for further evaluation. Would you like me to help you find a healthcare provider?",
 				"I suggest that you make an appointment with a healthcare professional. Do you need assistance finding a provider?"
 			],
-			"do_next": null
+			"do_next": "ask_for_doctor"
 		},
 		{
 			"keyword": ["emergency", "urgent", "critical", "serious"],
 			"responses": [
-				"If you are experiencing a medical emergency, please call your local emergency helpline immediately.",
-				"In case of a medical emergency, it's crucial to seek immediate medical assistance by calling emergency services.",
-				"If you believe you're facing a medical emergency, please contact emergency services without delay."
+				"If you are experiencing a medical emergency, please call your local emergency helpline immediately. Do you need assistance finding the number?",
+				"In case of a medical emergency, it's crucial to seek immediate medical assistance by calling emergency services. Do you need help finding the number?",
+				"If you believe you're facing a medical emergency, please contact emergency services without delay. Do you need help finding the number?"
 			],
-			"do_next": null
+			"do_next": "ask_for_doctor"
 		},
 		{
 			"keyword": ["medication", "medicine", "drug", "prescription", "pharmacy"],
@@ -602,27 +615,27 @@
 		{
 			"keyword": ["allergic reaction", "epinephrine"],
 			"responses": [
-				"If someone is experiencing a severe allergic reaction with symptoms like difficulty breathing, swelling, or hives, administer an epinephrine auto-injector if available. Call emergency services (911) immediately and stay with the person until help arrives. It's important to seek immediate medical attention for a severe allergic reaction.",
-				"In the event of a severe allergic reaction characterized by breathing difficulties, swelling, or hives, administer an epinephrine auto-injector if accessible. Call emergency services (911) immediately and stay with the person until professional help arrives. Seeking prompt medical attention is crucial for a severe allergic reaction.",
-				"If someone exhibits signs of a severe allergic reaction such as difficulty breathing, swelling, or hives, use an epinephrine auto-injector if it's available. Dial emergency services (911) immediately and remain with the person until medical responders arrive. Seeking immediate medical assistance is essential for a severe allergic reaction."
+				"If someone is experiencing a severe allergic reaction with symptoms like difficulty breathing, swelling, or hives, administer an epinephrine auto-injector if available. Call emergency services (<a href='tel:112'>112</a>) immediately and stay with the person until help arrives. It's important to seek immediate medical attention for a severe allergic reaction.",
+				"In the event of a severe allergic reaction characterized by breathing difficulties, swelling, or hives, administer an epinephrine auto-injector if accessible. Call emergency services (<a href='tel:112'>112</a>) immediately and stay with the person until professional help arrives. Seeking prompt medical attention is crucial for a severe allergic reaction.",
+				"If someone exhibits signs of a severe allergic reaction such as difficulty breathing, swelling, or hives, use an epinephrine auto-injector if it's available. Dial emergency services (<a href='tel:112'>112</a>) immediately and remain with the person until medical responders arrive. Seeking immediate medical assistance is essential for a severe allergic reaction."
 			],
 			"do_next": null
 		},
 		{
-			"keyword": ["seizure", "protect", "call 911"],
+			"keyword": ["seizure", "protect", "call emergency services"],
 			"responses": [
-				"If someone is having a seizure, keep them safe by removing any nearby objects that could cause harm. Cushion their head with a soft object and turn them onto their side to prevent choking. Do not restrain their movements. Once the seizure ends, stay with the person and call emergency services (911) if it's their first seizure or lasts longer than five minutes.",
-				"In case of a seizure, ensure the person's safety by clearing the area of objects that could pose a risk. Place a soft object under their head and gently roll them onto their side to avoid choking. Avoid restraining their movements. After the seizure, stay with the person and dial emergency services (911) if it's their first seizure or lasts longer than five minutes.",
-				"If someone experiences a seizure, prioritize their safety by removing potential hazards from their surroundings. Place something soft under their head and turn them onto their side to prevent choking. Avoid restricting their movements. Once the seizure ends, remain with the person and call emergency services (911) if it's their first seizure or lasts longer than five minutes."
+				"If someone is having a seizure, keep them safe by removing any nearby objects that could cause harm. Cushion their head with a soft object and turn them onto their side to prevent choking. Do not restrain their movements. Once the seizure ends, stay with the person and call emergency services (<a href='tel:112'>112</a>) if it's their first seizure or lasts longer than five minutes.",
+				"In case of a seizure, ensure the person's safety by clearing the area of objects that could pose a risk. Place a soft object under their head and gently roll them onto their side to avoid choking. Avoid restraining their movements. After the seizure, stay with the person and dial emergency services (<a href='tel:112'>112</a>) if it's their first seizure or lasts longer than five minutes.",
+				"If someone experiences a seizure, prioritize their safety by removing potential hazards from their surroundings. Place something soft under their head and turn them onto their side to prevent choking. Avoid restricting their movements. Once the seizure ends, remain with the person and call emergency services (<a href='tel:112'>112</a>) if it's their first seizure or lasts longer than five minutes."
 			],
 			"do_next": null
 		},
 		{
 			"keyword": ["heat stroke", "cool"],
 			"responses": [
-				"If someone shows signs of heat stroke, move them to a cool place and lower their body temperature. Remove excess clothing, apply cool water to their skin, and use fans or cold packs if available. Call emergency services (911) immediately for a suspected heat stroke.",
-				"In the case of heat stroke, promptly move the person to a cooler location and lower their body temperature. Remove any unnecessary clothing, apply cool water to their skin, and use fans or cold packs if accessible. Call emergency services (911) right away if you suspect a heat stroke.",
-				"If someone exhibits symptoms of heat stroke, relocate them to a cool area and help lower their body temperature. Remove excessive clothing, apply cool water to their skin, and use fans or cold packs if they're accessible. If you suspect heat stroke, call emergency services (911) immediately."
+				"If someone shows signs of heat stroke, move them to a cool place and lower their body temperature. Remove excess clothing, apply cool water to their skin, and use fans or cold packs if available. Call emergency services (<a href='tel:112'>112</a>) immediately for a suspected heat stroke.",
+				"In the case of heat stroke, promptly move the person to a cooler location and lower their body temperature. Remove any unnecessary clothing, apply cool water to their skin, and use fans or cold packs if accessible. Call emergency services (<a href='tel:112'>112</a>) right away if you suspect a heat stroke.",
+				"If someone exhibits symptoms of heat stroke, relocate them to a cool area and help lower their body temperature. Remove excessive clothing, apply cool water to their skin, and use fans or cold packs if they're accessible. If you suspect heat stroke, call emergency services (<a href='tel:112'>112</a>) immediately."
 			],
 			"do_next": null
 		},
@@ -713,15 +726,6 @@
 			"do_next": null
 		},
 		{
-			"keyword": ["may I", "can I", "is it okay"],
-			"responses": [
-				"Of course! Please go ahead and [action/request].",
-				"Yes, you may [action/request]. Feel free to proceed.",
-				"It's absolutely fine. You have permission to [action/request]."
-			],
-			"do_next": null
-		},
-		{
 			"keyword": ["confidential", "privacy", "secure"],
 			"responses": [
 				"I assure you that your information is kept confidential and secure.",
@@ -749,23 +753,40 @@
 			"do_next": null
 		},
 		{
-			"keyword": ["permission", "allowed", "authorization"],
+			"keyword": ["source", "where did you get that", "reference"],
 			"responses": [
-				"To proceed, we'll need your permission. Can you please grant us authorization?",
-				"Before proceeding, we kindly ask for your permission. Is it okay to proceed?",
-				"We require your permission to continue. Are you comfortable granting us authorization?"
+				"The information I provided is from reliable sources.",
+				"I gather information from trusted sources to provide accurate answers.",
+				"I rely on reputable sources for the information I provide."
 			],
 			"do_next": null
 		},
 		{
-			"keyword": ["source", "where did you get that", "reference"],
+			"keyword": ["disease", "illness", "sickness", "cure"],
 			"responses": [
-				"The information I provided is from reliable sources. If you'd like, I can share the references with you.",
-				"I gather information from trusted sources to provide accurate answers. Would you like to know more about the references?",
-				"I rely on reputable sources for the information I provide. If you're interested, I can share the references with you."
+				"You want me to provide you with a cure for your disease?",
+				"So, you want me to provide you with a cure for your illness?",
+				"You want me to provide you with a cure for your sickness?"
 			],
-			"do_next": null
+			"do_next": "ask_for_disease_info"
+		},
+		{
+			"keyword": ["precautions", "prevent", "avoid"],
+			"responses": [
+				"You want me to provide you with precautions for your disease?",
+				"So, you want me to give you some recommendations to prevent your illness?",
+				"You want me to provide you with precautions for your sickness?"
+			],
+			"do_next": "ask_for_disease_precautions"
+		},
+		{
+			"keyword": ["doctor", "hospital", "emergency"],
+			"responses": [
+				"You want me to ask a doctor to contact you?",
+				"So, you want me to ask a doctor to contact you?",
+				"You want me to give you the local emergency number?"
+			],
+			"do_next": "ask_for_doctor"
 		}
-		
 	]
 }
