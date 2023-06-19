@@ -11,8 +11,8 @@ function UserInput(props) {
     function handleChange(e) {
         setInputText(e.target.value)
     }
-
     function handleSubmit() {
+        if (inputText === "") return;
         props.onSubmitMessage(inputText);
         setInputText("");
     }

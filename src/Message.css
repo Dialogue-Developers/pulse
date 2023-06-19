@@ -14,10 +14,7 @@
 	margin-left: 20px;
 }
 #messages .message.left .text_wrapper::after,
-#messages .message.left .text_wrapper::before {
-	right: 100%;
-	border-right-color: #ee72a4;
-}
+
 #messages .message.left .text {
 	color: #fff;
 }
@@ -30,11 +27,7 @@
 	margin-right: 20px;
 	float: right;
 }
-#messages .message.right .text_wrapper::after,
-#messages .message.right .text_wrapper::before {
-	left: 100%;
-	border-left-color: #c7eafc;
-}
+
 #messages .message.right .text {
 	color: #45829b;
 }
