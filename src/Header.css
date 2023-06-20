@@ -1,24 +1,11 @@
 .top_menu {
-    background-color: #1f2833;
+    background-color: #202a36;
     width: 100%;
-    padding: 20px 0 15px;
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     display: grid;
     padding: 1em 2em;
     align-items: center;
-    grid-template-columns: 90% 10%;
-}
-.top_menu .buttons {
-    margin: 3px 0 0 20px;
-    position: absolute;
-}
-.top_menu .buttons .button {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
+    grid-template-columns: max-content auto;
+    gap: 45px;
 }
 
 .top_menu .title {
@@ -29,23 +16,32 @@
 
 select.engine-select {
     padding: 0.5em 1em;
-    
     border-color: #fff;
     background: #1f2833;
     color: #fff;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    border-radius: 10px;
+    height: 100%;
+    min-width: 135px;
+    margin-left: auto;
 }
 
 select.engine-select:focus {
     outline: none;
 }
 
-select.engine-select:hover {
-    color: #fff;
-    background: #e31165;
-}
-
 .top_menu .title .pulse-logo {
     max-height: 50px;
+}
+
+@media screen and (min-width: 960px) {
+    .top_menu {
+        grid-template-columns: auto max-content;
+    }
+
+    select.engine-select:hover {
+        color: #fff;
+        background: #e31165;
+    }
 }

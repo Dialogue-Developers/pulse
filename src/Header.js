@@ -9,11 +9,6 @@ function Header({ onEngineChange }) {
 
 	return (
 		<div className="top_menu">
-			<div className="buttons">
-				<div className="button close" />
-				<div className="button minimize" />
-				<div className="button maximize" />
-			</div>
 			<div className="title">
                 <img src='/images/pulse_logo_white.png' alt='Pulse Logo' className='pulse-logo' />
             </div>

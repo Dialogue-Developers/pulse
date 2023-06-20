@@ -1,34 +1,41 @@
 .bottom_wrapper {
     position: relative;
     width: 100%;
-    background-color:#1f2833;
-    padding: 20px 20px;
+    background-color: #242f3c;
+    padding: 15px 20px;
     bottom: 0;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto max-content;
 }
+
 .bottom_wrapper .message_input_wrapper {
     display: inline-block;
-    height: 50px;
-    border-radius: 25px;
+    height: 100%;
+    border-radius: 15px;
     border: 1px solid #fff;
-    width: calc(100% - 160px);
+    width: 100%;
     position: relative;
     padding: 0 20px;
 }
+
 .bottom_wrapper .message_input_wrapper .message_input {
     border: none;
     height: 100%;
-    box-sizing: border-box;
-    width: calc(100% - 40px);
+    width: calc(100% - 39px);
     position: absolute;
     outline-width: 0;
+    font-weight: 600;
     color: #fff;
-    background-color: #1f2833;
+    background-color: #242f3c;
 }
+
 .bottom_wrapper .send_message {
-    width: 140px;
-    height: 50px;
+    width: fit-content;
+    padding: 15px;
+    height: 100%;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #e31165;
     border: 2px solid #e31165;
     color: #fff;
@@ -37,21 +44,36 @@
     text-align: center;
     float: right;
 }
-.bottom_wrapper .send_message:hover {
-    color: #e31165;
-    background-color: #fff;
-}
+
 .bottom_wrapper .send_message .text {
     font-size: 18px;
     font-weight: 300;
-    display: inline-block;
     line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
 }
 
 .message_template {
     display: none;
 }
-.text {
-    
 
+@media screen and (max-width: 960px) {
+    .bottom_wrapper .send_message .text span {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bottom_wrapper .send_message {
+        padding: 0 15px;
+        border-radius: 15px;
+    }
+
+    .bottom_wrapper .send_message:hover {
+        color: #e31165;
+        background-color: #fff;
+    }
 }

@@ -1,18 +1,12 @@
 .chat_window {
-	width: calc(100% - 20px);
-	max-width: 98%;
-	min-height: 90vh;
-	border-radius: 10px;
-	margin: 10px auto;
-	left: 61%;
-	top: 31%;
-	transform: translateX(0%) translateY(0%);
-	box-shadow: 0 10px 20px rgba(79, 74, 74, 0.15);
-	background-color: #1f2833;
-	overflow: hidden;
-	display: grid;
-	grid-template-rows: max-content auto max-content;
-	border:#e3dcdc solid 3px;
-	border-radius:10px;
-
+    width: 100%;
+    height: 100vh;
+    transform: translateX(0%) translateY(0%);
+    box-shadow: 0 10px 20px rgba(79, 74, 74, 0.15);
+    background-color: #1f2833;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    border: #e3dcdc solid 3px;
+    border-radius: 20px;
 }

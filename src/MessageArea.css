@@ -4,7 +4,6 @@
 	padding: 20px 10px 0 10px;
 	margin: 0;
 	height: 100%;
-	max-height: 47em;
 	overflow-y: scroll;
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
