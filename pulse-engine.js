@@ -4,7 +4,9 @@ import { diagnoseSystem } from "./diagnose-system.js";
 
 // To allow the use of require
 import { createRequire } from "module";
-// Load dataset
+import { re } from "mathjs";
+
+// Load dataset function
 export async function loadDataset(path) {
 	const require = createRequire(import.meta.url);
 
@@ -21,27 +23,92 @@ export async function loadDataset(path) {
 	});
 }
 
-// Local storage contains the following:
-// - do_next: The next action to perform
-// - disease: The disease to provide information on
-function clearLocalStorage(obj) {
+// Check for yes/no responses
+function checkYesNo(message) {
+	let yes_no = null;
+
+	const positiveKeywords = ["yes", "yep", "yeah", "yup", "yea", "sure", "ok", "okay", "sure", "sure thing", "definitely"];
+	const negativeKeywords = ["no", "nope", "nah", "no thanks", "not really", "not", "not sure", "not really sure", "not sure really", "not sure, really", "not really"];
+
+	if (positiveKeywords.includes(message.toLowerCase())) {
+		yes_no = "yes";
+	} else if (negativeKeywords.includes(message.toLowerCase())) {
+		yes_no = "no";
+	}
+
+	return yes_no;
+}
+
+// Local storage memory functions
+// do_next: The next action to perform
+// disease: The disease to provide information on
+// fallbackCount: The number of times the fallback has been called repeatedly
+// lastResponse: Index of the last response to determine if the same response is being repeated
+
+function clearLocalStorageObject(obj) {
 	localStorage.removeItem(obj);
 }
 
+function setLocalStorageObject(obj, value) {
+	localStorage.setItem(obj, JSON.stringify(value));
+}
+
+function getLocalStorageObject(obj) {
+	return JSON.parse(localStorage.getItem(obj));
+}
+
+function clearLocalStorage() {
+	localStorage.clear();
+}
+
+function increaseFallbackCount() {
+	let fallbackCount = JSON.parse(localStorage.getItem("fallbackCount"));
+	if (!fallbackCount) {
+		fallbackCount = 0;
+	}
+	fallbackCount++;
+
+	setLocalStorageObject("fallbackCount", fallbackCount);
+
+	if (fallbackCount >= 5) {
+		console.log("PULSE ENGINE: Fallback count exceeded, resetting.");
+		resetFallbackCount();
+		clearLocalStorageObject("lastResponse");
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function resetFallbackCount() {
+	setLocalStorageObject("fallbackCount", 0);
+}
+
+function getFallbackCount() {
+	let fallbackCount = JSON.parse(localStorage.getItem("fallbackCount"));
+	if (!fallbackCount) {
+		fallbackCount = 0;
+	}
+	return fallbackCount;
+}
+
+// Debugging
+function consoleLogLocalStorage() {
+	console.log("do_next: " + getLocalStorageObject("do_next"));
+	console.log("disease: " + getLocalStorageObject("disease"));
+	console.log("fallbackCount: " + getLocalStorageObject("fallbackCount"));
+	console.log("lastResponse: " + getLocalStorageObject("lastResponse"));
+}
+
 export async function pulseEngine(message, user_id) {
+	// consoleLogLocalStorage();
 	// Strip punctuation from message
 	message = message.replace(/[.,\/#!$%?\^&\*;:{}=\-_`~()]/g, "");
 
 	// Check if user is responding to a yes/no question
-	let yes_no = null;
-	// If message contains just yes or no, set yes_no to yes or no
-	if (message.toLowerCase() == "yes" || message.toLowerCase() == "yep" || message.toLowerCase() == "yeah" || message.toLowerCase() == "yup" || message.toLowerCase() == "yea") {
-		yes_no = "yes";
-	} else if (message.toLowerCase() == "no" || message.toLowerCase() == "nope" || message.toLowerCase() == "nah") {
-		yes_no = "no";
-	}
+	const yes_no = checkYesNo(message);
 
-	// Check storage is user has a pending action (do_next)
+	// Functional conversation
 	const do_next = JSON.parse(localStorage.getItem("do_next"));
 	if (do_next) {
 		console.log("PULSE ENGINE: Excecute " + do_next + " for user " + user_id);
@@ -52,18 +119,20 @@ export async function pulseEngine(message, user_id) {
 				return await diagnoseSystem(message).then((diseases) => {
 					// Check if response is null
 					if (!diseases[0]) {
+						if(!increaseFallbackCount()) return fallbackOptions("change_topic");
 						return fallbackOptions("null_diagnose");
 					} else {
-						clearLocalStorage("do_next");
-
+						clearLocalStorageObject("do_next");
+						resetFallbackCount();
 						// Create a response with the top disease
 						let response = "According to my diagnosis, you may have ";
 						response += diseases[0].disease + ". ";
 						response += "Would you like to know more about this disease?";
 
 						// Store do_next in local storage
-						localStorage.setItem("do_next", JSON.stringify("ask_for_disease_info"));
-						localStorage.setItem("disease", JSON.stringify(diseases[0]));
+						// localStorage.setItem("do_next", JSON.stringify("ask_for_disease_info"));
+						setLocalStorageObject("do_next", "ask_for_disease_info");
+						setLocalStorageObject("disease", diseases[0]);
 
 						return response;
 					}
@@ -73,18 +142,23 @@ export async function pulseEngine(message, user_id) {
 				const disease = JSON.parse(localStorage.getItem("disease"));
 
 				if (yes_no == "yes" && disease) {
+					resetFallbackCount();
 					// Get disease from local storage
-					let response = "Here is some information about " + disease.disease + ". ";
+					let response = "Here is some information about " + disease.disease + ".<br>";
 					response += disease.description + " ";
-					response += "Would you like me to give you some advice on how to treat this disease?";
-					localStorage.setItem("do_next", JSON.stringify("ask_for_disease_precautions"));
+					response += "Would you like me to give you some advice on how to treat your disease?";
+					setLocalStorageObject("do_next", "ask_for_disease_precautions");
 					return response;
 				} else if (yes_no == "no" && disease) {
-					clearLocalStorage("do_next");
+					clearLocalStorageObject("do_next");
+					resetFallbackCount();
 					return "Okay, but if you change your mind, just ask me about it."; // TODO: Add to responses.json
 				} else if (!disease) {
+					if(!increaseFallbackCount()) return fallbackOptions("change_topic");
+					clearLocalStorageObject("do_next");
 					return fallbackOptions("null_disease");
 				} else {
+					if(!increaseFallbackCount()) return fallbackOptions("change_topic");
 					return "Sorry, I didn't understand that. You want to know more about your disease, right? Please answer with yes or no.";
 				}
 			case "ask_for_disease_precautions":
@@ -92,6 +166,7 @@ export async function pulseEngine(message, user_id) {
 				console.log("PULSE ENGINE: Asking for disease precautions for user " + user_id);
 
 				if (yes_no == "yes") {
+					resetFallbackCount();
 					// Get disease from local storage
 					const disease = JSON.parse(localStorage.getItem("disease"));
 					let response = "I recommend that you: <br><ul>";
@@ -101,12 +176,15 @@ export async function pulseEngine(message, user_id) {
 					response += "</ul>";
 					response += "I still recommend that you see a doctor, as I am not a replacement for a real doctor. ";
 					response += "Would you like me to help you find a doctor?";
-					localStorage.setItem("do_next", JSON.stringify("ask_for_doctor"));
+
+					setLocalStorageObject("do_next", "ask_for_doctor");
 					return response;
 				} else if (yes_no == "no") {
-					clearLocalStorage("do_next");
+					resetFallbackCount();
+					clearLocalStorageObject("do_next");
 					return "Okay, but if you change your mind, just ask me about it."; // TODO: Add to responses.json
 				} else {
+					if(!increaseFallbackCount()) return fallbackOptions("change_topic");
 					return "Sorry, I didn't understand that. Please answer with yes or no.";
 				}
 			case "ask_for_doctor":
@@ -114,16 +192,21 @@ export async function pulseEngine(message, user_id) {
 				if (yes_no == "yes") {
 					console.log("PULSE ENGINE: Asking for doctor for user " + user_id);
 					// Germany emergency number: 112
-					clearLocalStorage("do_next");
+					clearLocalStorageObject("do_next");
+					resetFallbackCount();
 					return "I can help you find a doctor. <a href='tel:112'>Call 112</a> if you need immediate help. ";
 				} else if (yes_no == "no") {
-					clearLocalStorage("do_next");
+					clearLocalStorageObject("do_next");
+					resetFallbackCount();
 					return "Okay, but if you change your mind, just ask me about it."; // TODO: Add to responses.json
 				} else {
+					if(!increaseFallbackCount()) return fallbackOptions("change_topic");
 					return "Sorry, I didn't understand that. Please answer with yes or no.";
 				}
 			case "end_conversation":
-				clearLocalStorage("do_next");
+				console.log("PULSE ENGINE: Ending conversation for user " + user_id);
+				clearLocalStorage();
+				resetFallbackCount();
 
 			case "null":
 				break;
@@ -134,12 +217,21 @@ export async function pulseEngine(message, user_id) {
 	return keywordSpotter(message).then((response_object) => {
 		// Check if response is null
 		if (response_object == null) {
+			if(!increaseFallbackCount()) return fallbackOptions("change_topic");
 			return fallbackOptions("null");
+		} else {
+			setLocalStorageObject("lastResponse", response_object.responseIndex);
 		}
 
 		// Store do_next in local storage if it exists
 		if (response_object.do_next) {
-			localStorage.setItem("do_next", JSON.stringify(response_object.do_next));
+			setLocalStorageObject("do_next", response_object.do_next);
+		}
+		
+		if (response_object.responseIndex == getLocalStorageObject("lastResponse") && response_object.do_next == null) {
+			if(!increaseFallbackCount()) return fallbackOptions("change_topic");
+		} else {
+			resetFallbackCount();
 		}
 
 		return response_object.response;

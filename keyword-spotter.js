@@ -11,6 +11,7 @@ export async function keywordSpotter(message) {
 		// Perform keyword search on the message
 		let response = null;
 		let do_next = null;
+		let responseIndex = 0;
 
 		const responseMap = {};
 		responses.forEach((response_object) => {
@@ -19,16 +20,19 @@ export async function keywordSpotter(message) {
 					if (word.toLowerCase() == keyword.toLowerCase()) {
 						response = response_object.responses[Math.floor(Math.random() * response_object.responses.length)];
 						do_next = response_object.do_next;
+						responseIndex = responses.indexOf(response_object);
 					}
 				});
 			});
 		});
+
 		for (const word of words) {
 			const wordLower = word.toLowerCase();
 			if (responseMap[wordLower]) {
 				const responseObj = responseMap[wordLower];
 				const response = responseObj.responses[Math.floor(Math.random() * responseObj.responses.length)];
 				do_next = responseObj.do_next;
+				responseIndex = responses.indexOf(responseObj);
 				break;
 			}
 		}
@@ -38,7 +42,8 @@ export async function keywordSpotter(message) {
 		} else {
 			return {
 				response: response,
-				do_next: do_next
+				do_next: do_next,
+				responseIndex: responseIndex
 			};
 		}
 	});

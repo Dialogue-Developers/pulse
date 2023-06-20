@@ -36,12 +36,13 @@ app.use(express.static("public"));
 
 io.on("connection", (socket) => {
 	console.log(`CONNECTED ${socket.id}`);
-	
+
 	socket.on("disconnect", (reason) => {
 		global.localStorage.clear();
 		console.log(`DISCONNECTED ${socket.id}: ${reason}`);
 	});
-	
+
+	let openaiHistory = [];
 
 	socket.on("message", (data) => {
 		data = JSON.parse(JSON.stringify(data));
@@ -50,27 +51,49 @@ io.on("connection", (socket) => {
 
 		// OpenAI Engine
 		if (data.engine == "openai") {
+			let messages = [];
+
+			messages.push({
+				role: "system",
+				content: "You're a AI health assistant called Pulse that can diagnose user diseases based on symptoms that the user is having. The assistant is helpful, creative, clever, and very friendly.",
+			});
+
+			for (const [input_text, completion_text] of openaiHistory) {
+				messages.push({
+					role: "user",
+					content: input_text,
+				});
+				messages.push({
+					role: "assistant",
+					content: completion_text,
+				});
+			}
+
+			messages.push({
+				role: "user",
+				content: data.question,
+			});
+
 			(async () => {
 				try {
-					const completion = await openai.createCompletion({
-						model: "text-davinci-003",
-						prompt:
-							"The following is a conversation with an AI health assistant called Pulse that can diagnose user diseases based on symptoms that the user is having. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you today?\nAI: I am an AI created by Dialogue Developers. How can I help you today?\nHuman: " +
-							data.question +
-							"\nAI:",
-						temperature: 0.6,
+					const completion = await openai.createChatCompletion({
+						model: "gpt-3.5-turbo",
+						messages: messages,
 					});
-					// res.status(200).json({ result: completion.data.choices[0].text });
 
-					console.log(`ANSWER (${socket.id}): ${completion.data.choices[0].text}`);
+					// console.log(completion.data.choices);
 
-					socket.emit("answer", completion.data.choices[0].text);
+					openaiHistory.push([data.question, completion.data.choices[0].message.content]);
+
+					console.log(`ANSWER (${socket.id}): ${completion.data.choices[0].message.content}`);
+
+					socket.emit("answer", completion.data.choices[0].message.content);
 				} catch (error) {
 					console.log(error);
 				}
 			})();
 
-		// Pulse Engine
+			// Pulse Engine
 		} else if (data.engine == "pulse") {
 			pulseEngine(data.question, socket.id).then((response) => {
 				console.log(`ANSWER (${socket.id}): ${response}`);
