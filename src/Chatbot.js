@@ -42,11 +42,13 @@ function Chatbot() {
 		//handle server responses
 		socket.on("answer", (data) => {
 			setMessages([...messages, { text: data, position: "left" }]);
+			document.querySelector("body").classList.remove("thinking");
 		});
 	}, [messages, selectedEngine]);
 
 	function onSubmitMessage(inputText) {
 		setMessages([...messages, { text: inputText, position: "right" }]);
+		document.querySelector("body").classList.add("thinking");
 	}
 
 	/*

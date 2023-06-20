@@ -12,7 +12,7 @@ function Header({ onEngineChange }) {
 			<div className="title">
                 <img src='/images/pulse_logo_white.png' alt='Pulse Logo' className='pulse-logo' />
             </div>
-			<select onChange={handleEngineChange} className="engine-select">
+			<select onChange={handleEngineChange} className="engine-select" title="Select an engine">
 				<option value="pulse">Pulse</option>
 				<option value="openai">OpenAI</option>
 			</select>

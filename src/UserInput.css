@@ -45,7 +45,7 @@
     float: right;
 }
 
-.bottom_wrapper .send_message .text {
+.bottom_wrapper .send_message .text div {
     font-size: 18px;
     font-weight: 300;
     line-height: 48px;
@@ -58,6 +58,34 @@
 
 .message_template {
     display: none;
+}
+
+.bottom_wrapper .send_message .text .sending {
+    display: none;
+}
+
+body.thinking .bottom_wrapper .send_message .text .sending {
+    display: flex;
+}
+
+body.thinking .bottom_wrapper .send_message .text .send {
+    display: none;
+}
+
+.bottom_wrapper .send_message .text .sending svg {
+    animation-name: spin;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 960px) {
