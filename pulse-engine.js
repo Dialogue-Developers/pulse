@@ -101,7 +101,7 @@ function consoleLogLocalStorage() {
 }
 
 export async function pulseEngine(message, user_id) {
-	consoleLogLocalStorage();
+	// consoleLogLocalStorage();
 	// Strip punctuation from message
 	message = message.replace(/[.,\/#!$%?\^&\*;:{}=\-_`~()]/g, "");
 
