@@ -29,7 +29,7 @@ const server = createServer(app);
 const io = new Server(server, {
 	cors: {
 		origin: "*",
-	},
+	}
 });
 
 app.use(express.static("public"));
@@ -103,6 +103,8 @@ io.on("connection", (socket) => {
 	});
 });
 
-server.listen(443, function () {
-	console.log("server started at port 443");
+const port = process.env.HTTP_PORT || 80;
+
+server.listen(port, () => {
+	console.log("server started at port " + port);
 });
