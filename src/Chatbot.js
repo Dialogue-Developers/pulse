@@ -6,10 +6,9 @@ import {UserInput} from "./UserInput";
 import {MessageArea} from "./MessageArea";
 
 import {io} from "socket.io-client";
-// Get local IP address dynamically
-let ip = window.location.hostname;
-// User https for sockets
-const socket = io("wss://" + ip + ":443");
+
+let host = window.location.hostname;
+const socket = io("ws://" + host + ":80");
 
 socket.on("connect_error", (err) => {
     console.log(`connect_error due to ${err.message}`);
