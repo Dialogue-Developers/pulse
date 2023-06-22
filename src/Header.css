@@ -1,4 +1,4 @@
-.top_menu {
+.menu_top {
     background-color: #202a36;
     width: 100%;
     display: grid;
@@ -8,7 +8,7 @@
     gap: 45px;
 }
 
-.top_menu .title {
+.menu_top .title {
     text-align: center;
     color: #bcbdc0;
     font-size: 20px;
@@ -31,12 +31,12 @@ select.engine-select:focus {
     outline: none;
 }
 
-.top_menu .title .pulse-logo {
+.menu_top .title .pulse-logo {
     max-height: 50px;
 }
 
 @media screen and (min-width: 960px) {
-    .top_menu {
+    .menu_top {
         grid-template-columns: auto max-content;
     }
 

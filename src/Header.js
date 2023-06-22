@@ -8,7 +8,7 @@ function Header({ onEngineChange }) {
 	};
 
 	return (
-		<div className="top_menu">
+		<div className="menu_top">
 			<div className="title">
                 <img src='/images/pulse_logo_white.png' alt='Pulse Logo' className='pulse-logo' />
             </div>

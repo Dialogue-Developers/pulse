@@ -1,4 +1,4 @@
-.bottom_wrapper {
+.wrapper_bottom {
     position: relative;
     width: 100%;
     background-color: #242f3c;
@@ -9,7 +9,7 @@
     grid-template-columns: auto max-content;
 }
 
-.bottom_wrapper .message_input_wrapper {
+.wrapper_bottom .message_input_wrapper {
     display: inline-block;
     height: 100%;
     border-radius: 15px;
@@ -19,7 +19,7 @@
     padding: 0 20px;
 }
 
-.bottom_wrapper .message_input_wrapper .message_input {
+.wrapper_bottom .message_input_wrapper .message_input {
     border: none;
     height: 100%;
     width: calc(100% - 39px);
@@ -30,7 +30,7 @@
     background-color: #242f3c;
 }
 
-.bottom_wrapper .send_message {
+.wrapper_bottom .send_message {
     width: fit-content;
     padding: 15px;
     height: 100%;
@@ -45,7 +45,7 @@
     float: right;
 }
 
-.bottom_wrapper .send_message .text div {
+.wrapper_bottom .send_message .text div {
     font-size: 18px;
     font-weight: 300;
     line-height: 48px;
@@ -60,19 +60,19 @@
     display: none;
 }
 
-.bottom_wrapper .send_message .text .sending {
+.wrapper_bottom .send_message .text .sending {
     display: none;
 }
 
-body.thinking .bottom_wrapper .send_message .text .sending {
+body.thinking .wrapper_bottom .send_message .text .sending {
     display: flex;
 }
 
-body.thinking .bottom_wrapper .send_message .text .send {
+body.thinking .wrapper_bottom .send_message .text .send {
     display: none;
 }
 
-.bottom_wrapper .send_message .text .sending svg {
+.wrapper_bottom .send_message .text .sending svg {
     animation-name: spin;
   animation-duration: 1500ms;
   animation-iteration-count: infinite;
@@ -89,18 +89,18 @@ body.thinking .bottom_wrapper .send_message .text .send {
 }
 
 @media screen and (max-width: 960px) {
-    .bottom_wrapper .send_message .text span {
+    .wrapper_bottom .send_message .text span {
         display: none;
     }
 }
 
 @media screen and (min-width: 960px) {
-    .bottom_wrapper .send_message {
+    .wrapper_bottom .send_message {
         padding: 0 15px;
         border-radius: 15px;
     }
 
-    .bottom_wrapper .send_message:hover {
+    .wrapper_bottom .send_message:hover {
         color: #e31165;
         background-color: #fff;
     }

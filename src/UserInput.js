@@ -26,7 +26,7 @@ function UserInput(props) {
     }
 
     return (
-        <div className="bottom_wrapper">
+        <div className="wrapper_bottom">
             <div className="message_input_wrapper">
                 <input className="message_input" value={inputText} onChange={handleChange}
                     placeholder="Type your message here..." onKeyPress={handleKeyPress} />

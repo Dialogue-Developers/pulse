@@ -55,7 +55,7 @@ function Chatbot() {
       Render HTML
     */
 	return (
-		<div className="chat_window">
+		<div className="window_chat">
 			<Header onEngineChange={setSelectedEngine} />
 			<MessageArea messages={messages} />
 			<UserInput onSubmitMessage={onSubmitMessage} />
