@@ -6,9 +6,7 @@ import {UserInput} from "./UserInput";
 import {MessageArea} from "./MessageArea";
 
 import {io} from "socket.io-client";
-
-let host = window.location.hostname;
-const socket = io("ws://" + host + ":80");
+const socket = io();
 
 socket.on("connect_error", (err) => {
     console.log(`connect_error due to ${err.message}`);
