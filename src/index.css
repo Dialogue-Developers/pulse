@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/* Styling for placeholder image */
+=======
 @import '@fortawesome/fontawesome-svg-core/styles.css';
 
 .bd-placeholder-img {
@@ -7,18 +10,16 @@
     -moz-user-select: none;
     user-select: none;
 }
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
 
+/* Body styling */
 body {
     background-color: #192029;
-    font-family: "Calibri", "Roboto", sans-serif;
+    font-family: "Calibri",sans-serif;
 }
 
+/* Styling for chatbot container */
 #chatbot {
     position: relative;
 }

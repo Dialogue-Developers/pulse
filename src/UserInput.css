@@ -1,4 +1,4 @@
-.bottom_wrapper {
+.wrapper_bottom {
     position: relative;
     width: 100%;
     background-color: #242f3c;
@@ -8,8 +8,12 @@
     gap: 15px;
     grid-template-columns: auto max-content;
 }
+<<<<<<< HEAD
+.wrapper_bottom .message_input_wrapper {
+=======
 
 .bottom_wrapper .message_input_wrapper {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
     display: inline-block;
     height: 100%;
     border-radius: 15px;
@@ -18,8 +22,12 @@
     position: relative;
     padding: 0 20px;
 }
+<<<<<<< HEAD
+.wrapper_bottom .message_input_wrapper .message_input {
+=======
 
 .bottom_wrapper .message_input_wrapper .message_input {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
     border: none;
     height: 100%;
     width: calc(100% - 39px);
@@ -29,11 +37,17 @@
     color: #fff;
     background-color: #242f3c;
 }
+<<<<<<< HEAD
+.wrapper_bottom .send_message {
+    width: 140px;
+    height: 50px;
+=======
 
 .bottom_wrapper .send_message {
     width: fit-content;
     padding: 15px;
     height: 100%;
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
     display: inline-block;
     border-radius: 50%;
     background-color: #e31165;
@@ -42,10 +56,18 @@
     cursor: pointer;
     transition: all 0.2s linear;
     text-align: center;
-    float: right;
+    
 }
+<<<<<<< HEAD
+.wrapper_bottom .send_message:hover {
+    color: #e31165;
+    background-color: #fff;
+}
+.wrapper_bottom .send_message .text {
+=======
 
 .bottom_wrapper .send_message .text div {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
     font-size: 18px;
     font-weight: 300;
     line-height: 48px;
@@ -58,6 +80,8 @@
 
 .message_template {
     display: none;
+<<<<<<< HEAD
+=======
 }
 
 .bottom_wrapper .send_message .text .sending {
@@ -104,4 +128,5 @@ body.thinking .bottom_wrapper .send_message .text .send {
         color: #e31165;
         background-color: #fff;
     }
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 }
