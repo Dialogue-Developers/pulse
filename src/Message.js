@@ -5,7 +5,7 @@ function Message(props) {
 
     return (
         <li className={"message appeared " + props.position}>            
-            <div className="text_wrapper">
+            <div className="wrapper_text">
                 <div className="text">
                     <span dangerouslySetInnerHTML={{ __html: props.text }} />
                 </div>

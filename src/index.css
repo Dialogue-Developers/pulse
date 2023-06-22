@@ -1,22 +1,13 @@
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
+/* Styling for placeholder image */
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
 
+/* Body styling */
 body {
     background-color: #192029;
-    font-family: "Calibri", "Roboto", sans-serif;
+    font-family: "Calibri",sans-serif;
 }
 
+/* Styling for chatbot container */
 #chatbot {
     position: relative;
 }

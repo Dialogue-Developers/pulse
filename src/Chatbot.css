@@ -1,4 +1,4 @@
-.chat_window {
+.window_chat {
 	width: calc(100% - 20px);
 	max-width: 98%;
 	min-height: 90vh;

@@ -1,11 +1,11 @@
-.bottom_wrapper {
+.wrapper_bottom {
     position: relative;
     width: 100%;
     background-color:#1f2833;
     padding: 20px 20px;
     bottom: 0;
 }
-.bottom_wrapper .message_input_wrapper {
+.wrapper_bottom .message_input_wrapper {
     display: inline-block;
     height: 50px;
     border-radius: 25px;
@@ -14,7 +14,7 @@
     position: relative;
     padding: 0 20px;
 }
-.bottom_wrapper .message_input_wrapper .message_input {
+.wrapper_bottom .message_input_wrapper .message_input {
     border: none;
     height: 100%;
     box-sizing: border-box;
@@ -24,7 +24,7 @@
     color: #fff;
     background-color: #1f2833;
 }
-.bottom_wrapper .send_message {
+.wrapper_bottom .send_message {
     width: 140px;
     height: 50px;
     display: inline-block;
@@ -35,13 +35,13 @@
     cursor: pointer;
     transition: all 0.2s linear;
     text-align: center;
-    float: right;
+    
 }
-.bottom_wrapper .send_message:hover {
+.wrapper_bottom .send_message:hover {
     color: #e31165;
     background-color: #fff;
 }
-.bottom_wrapper .send_message .text {
+.wrapper_bottom .send_message .text {
     font-size: 18px;
     font-weight: 300;
     display: inline-block;
@@ -50,8 +50,4 @@
 
 .message_template {
     display: none;
-}
-.text {
-    
-
 }

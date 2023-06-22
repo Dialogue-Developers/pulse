@@ -1,4 +1,4 @@
-.top_menu {
+.menu_top {
     background-color: #1f2833;
     width: 100%;
     padding: 20px 0 15px;
@@ -8,11 +8,11 @@
     align-items: center;
     grid-template-columns: 90% 10%;
 }
-.top_menu .buttons {
+.menu_top .buttons {
     margin: 3px 0 0 20px;
     position: absolute;
 }
-.top_menu .buttons .button {
+.menu_top .buttons .button {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -21,7 +21,7 @@
     position: relative;
 }
 
-.top_menu .title {
+.menu_top .title {
     text-align: center;
     color: #bcbdc0;
     font-size: 20px;
@@ -46,6 +46,6 @@ select.engine-select:hover {
     background: #e31165;
 }
 
-.top_menu .title .pulse-logo {
+.menu_top .title .pulse-logo {
     max-height: 50px;
 }

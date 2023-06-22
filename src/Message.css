@@ -9,11 +9,11 @@
 	background-color: #e31165;
 	float: left;
 }
-#messages .message.left .text_wrapper {
+#messages .message.left .wrapper_text {
 	background-color: #ee72a4;
 	margin-left: 20px;
 }
-#messages .message.left .text_wrapper::after,
+#messages .message.left .wrapper_text::after,
 
 #messages .message.left .text {
 	color: #fff;
@@ -22,7 +22,7 @@
 	background-color: #45829b;
 	float: right;
 }
-#messages .message.right .text_wrapper {
+#messages .message.right .wrapper_text {
 	background-color: #c7eafc;
 	margin-right: 20px;
 	float: right;
@@ -40,7 +40,7 @@
 	border-radius: 50%;
 	display: inline-block;
 }
-#messages .message .text_wrapper {
+#messages .message .wrapper_text {
 	display: inline-block;
 	padding: 20px;
 	border-radius: 6px;
@@ -51,8 +51,8 @@
 	position: relative;
 	max-width: 60%;
 }
-#messages .message .text_wrapper::after,
-#messages .message .text_wrapper:before {
+#messages .message .wrapper_text::after,
+#messages .message .wrapper_text:before {
 	top: 18px;
 	border: solid transparent;
 	content: " ";
@@ -61,15 +61,15 @@
 	position: absolute;
 	pointer-events: none;
 }
-#messages .message .text_wrapper::after {
+#messages .message .wrapper_text::after {
 	border-width: 13px;
 	margin-top: 0px;
 }
-#messages .message .text_wrapper::before {
+#messages .message .wrapper_text::before {
 	border-width: 15px;
 	margin-top: -2px;
 }
-#messages .message .text_wrapper .text {
+#messages .message .wrapper_text .text {
 	font-size: 18px;
 	font-weight: 300;
 }

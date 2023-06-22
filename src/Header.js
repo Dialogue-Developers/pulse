@@ -8,7 +8,7 @@ function Header({ onEngineChange }) {
 	};
 
 	return (
-		<div className="top_menu">
+		<div className="menu_top">
 			<div className="buttons">
 				<div className="button close" />
 				<div className="button minimize" />
