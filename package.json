@@ -3,6 +3,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
+    "mathjs": "^11.8.2",
     "node-localstorage": "^2.2.1",
     "openai": "^3.2.1",
     "socket.io": "^4.4.1"
