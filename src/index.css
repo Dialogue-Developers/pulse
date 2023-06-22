@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 /* Styling for placeholder image */
+=======
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 
 
 /* Body styling */

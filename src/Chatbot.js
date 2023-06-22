@@ -6,7 +6,7 @@ import {UserInput} from "./UserInput";
 import {MessageArea} from "./MessageArea";
 
 import {io} from "socket.io-client";
-const socket = io("ws://localhost:5000");
+const socket = io();
 
 socket.on("connect_error", (err) => {
     console.log(`connect_error due to ${err.message}`);
@@ -42,11 +42,13 @@ function Chatbot() {
 		//handle server responses
 		socket.on("answer", (data) => {
 			setMessages([...messages, { text: data, position: "left" }]);
+			document.querySelector("body").classList.remove("thinking");
 		});
 	}, [messages, selectedEngine]);
 
 	function onSubmitMessage(inputText) {
 		setMessages([...messages, { text: inputText, position: "right" }]);
+		document.querySelector("body").classList.add("thinking");
 	}
 
 	/*

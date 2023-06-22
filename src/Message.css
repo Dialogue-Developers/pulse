@@ -2,27 +2,43 @@
 	clear: both;
 	overflow: hidden;
 	margin-bottom: 20px;
-	transition: all 0.5s linear;
-	opacity: 0;
+	transition: all 0.4s ease-in-out;
 }
+
 #messages .message.left .avatar {
 	background-color: #e31165;
 	float: left;
 }
+<<<<<<< HEAD
 #messages .message.left .wrapper_text {
 	background-color: #ee72a4;
 	margin-left: 20px;
 }
 #messages .message.left .wrapper_text::after,
+=======
+
+#messages .message.left .text_wrapper {
+	background-color: #ee72a4;
+	margin-left: 20px;
+}
+
+#messages .message.left .text_wrapper::after,
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 
 #messages .message.left .text {
 	color: #fff;
 }
+
 #messages .message.right .avatar {
 	background-color: #45829b;
 	float: right;
 }
+<<<<<<< HEAD
 #messages .message.right .wrapper_text {
+=======
+
+#messages .message.right .text_wrapper {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 	background-color: #c7eafc;
 	margin-right: 20px;
 	float: right;
@@ -31,28 +47,37 @@
 #messages .message.right .text {
 	color: #45829b;
 }
-#messages .message.appeared {
-	opacity: 1;
-}
+
 #messages .message .avatar {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	display: inline-block;
 }
+<<<<<<< HEAD
 #messages .message .wrapper_text {
+=======
+
+#messages .message .text_wrapper {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 	display: inline-block;
-	padding: 20px;
+	padding: 15px 20px;
 	border-radius: 6px;
 	width: fit-content;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
 	min-width: 100px;
 	position: relative;
 	max-width: 60%;
 }
+<<<<<<< HEAD
 #messages .message .wrapper_text::after,
 #messages .message .wrapper_text:before {
+=======
+
+#messages .message .text_wrapper::after,
+#messages .message .text_wrapper:before {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 	top: 18px;
 	border: solid transparent;
 	content: " ";
@@ -61,6 +86,7 @@
 	position: absolute;
 	pointer-events: none;
 }
+<<<<<<< HEAD
 #messages .message .wrapper_text::after {
 	border-width: 13px;
 	margin-top: 0px;
@@ -70,13 +96,20 @@
 	margin-top: -2px;
 }
 #messages .message .wrapper_text .text {
+=======
+
+#messages .message .text_wrapper::after {
+	border-width: 13px;
+	margin-top: 0px;
+}
+
+#messages .message .text_wrapper::before {
+	border-width: 15px;
+	margin-top: -2px;
+}
+
+#messages .message .text_wrapper .text {
+>>>>>>> db091a31e72e5bc580da1df5ff6ad8ae4e0e8df0
 	font-size: 18px;
 	font-weight: 300;
 }
-/* 
-#messages{
-
-	border:#fff solid 2px;
-	border-radius:10px;
-}
-*/
