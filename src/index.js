@@ -5,7 +5,6 @@ import "./index.css";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Add the icon to the library
 library.add(faPaperPlane, faSpinner);

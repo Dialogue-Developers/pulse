@@ -4,7 +4,7 @@
     display: grid;
     padding: 1em 2em;
     align-items: center;
-    grid-template-columns: max-content auto;
+    grid-template-columns: auto auto;
     gap: 45px;
 }
 
@@ -33,6 +33,8 @@ select.engine-select:focus {
 
 .menu_top .title .pulse-logo {
     max-height: 50px;
+    width: 100%;
+    max-width: 130px;
 }
 
 @media screen and (min-width: 960px) {
