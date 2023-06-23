@@ -1,13 +1,7 @@
-<style>
-.polse{
-    font-size:30px;
-    color: #e31165;
-}
- </style>
-
 <h1 align="center">Internet Technologies</h1>
 
-<p class="polse">Pulse - Your AI chatbot</p>
+<p style="color: #e31165; font-size: 30px;">Pulse - Your AI chatbot</p>
+
 <p>This was project for the Internet Technologies course(Leistungsnachweis)</p>
 <p>The website can be accessed <a href="pulse-ai.de">here</a></p>
 
@@ -44,18 +38,18 @@ Joled Zaganjori
 <h1> Responsibilities</h1>
 <p>Elmer Dema:</p>
 <ul>
-<li>Json dataset</li>
-<li>Fallback system</li>
+<li>Knowledge Base(JSON data)</li>
+<li>Design & Layout</li>
 <li>Keyword Spotter</li>
-<li>React components</li>
+<li>React Components</li>
 </ul>
 
 <p>Juled Zaganjori:</p>
 <ul>
-<li>Project deployment(azure)</li>
-<li>Web sockets</li>
-<li>Front End(html,css)</li>
-<li>Open API</li>
+<li>Project deployment</li>
+<li>Pulse Engine</li>
+<li>OpenAI Integration</li>
+<li>Fallback Mechanism</li>
 </ul>
 
 <h1> Instructions</h1>
