@@ -70,6 +70,7 @@ function increaseFallbackCount() {
 
 	setLocalStorageObject("fallbackCount", fallbackCount);
 
+	// Fallback max count set to 5
 	if (fallbackCount >= 5) {
 		console.log("PULSE ENGINE: Fallback count exceeded, resetting.");
 		resetFallbackCount();

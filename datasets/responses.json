@@ -181,27 +181,27 @@
 		{
 			"keyword": ["nutrition", "diet", "eating", "food"],
 			"responses": [
-				"Nutrition plays a crucial role in maintaining good health. Are you seeking information on a specific dietary concern?",
-				"Proper nutrition is essential for overall well-being. Do you have any questions regarding a balanced diet?",
-				"A healthy diet is important for optimal health. Is there something specific you would like to know about nutrition?"
+				"Nutrition plays a crucial role in maintaining good health. I recommend consulting a nutritionist for personalized dietary advice.",
+				"Proper nutrition is essential for overall well-being. You should try to eat a balanced diet consisting of fruits, vegetables, whole grains, and lean protein.",
+				"A healthy diet is important for optimal health. It's vital to eat a variety of foods from all food groups, including fruits, vegetables, whole grains, and lean protein."
 			],
 			"do_next": null
 		},
 		{
 			"keyword": ["exercise", "fitness", "workout", "physical activity", "active"],
 			"responses": [
-				"Physical activity is beneficial for maintaining a healthy lifestyle. How can I assist you with exercise-related inquiries?",
-				"Regular exercise has numerous health benefits. Do you need guidance or information on a specific exercise routine?",
-				"Staying active is important for your well-being. How can I help you with your fitness-related questions?"
+				"Physical activity is beneficial for maintaining a healthy lifestyle. You should try to exercise regularly, at least 3 times a week.",
+				"Regular exercise has numerous health benefits. Maybe you can try going for a walk, jogging, or cycling.",
+				"Staying active is important for your well-being. There are many ways to exercise, such as going for a walk, jogging, or cycling."
 			],
 			"do_next": null
 		},
 		{
 			"keyword": ["mental health", "stress", "anxiety", "depression", "well-being"],
 			"responses": [
-				"Mental health is vital for overall wellness. If you're experiencing difficulties, I recommend seeking support from a mental health professional.",
-				"Taking care of your mental health is essential. Are you looking for information on managing stress or specific mental health conditions?",
-				"If you're struggling with your mental health, I encourage you to reach out to a mental health provider who can offer guidance and support."
+				"Mental health is vital for overall wellness. If you're experiencing difficulties, I recommend seeking support from a mental health professional.You should try to do things that make you happy and help you relax. Maybe you can try going for a walk, reading a book, or listening to music.",
+				"Taking care of your mental health is essential. You should try to do things that make you happy and help you relax. Maybe you can try going for a walk, reading a book, or listening to music.",
+				"If you're struggling with your mental health, I encourage you try to do things that make you happy and help you relax. Maybe you can try going for a walk, reading a book, or listening to music."
 			],
 			"do_next": null
 		},
