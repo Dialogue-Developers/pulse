@@ -73,6 +73,7 @@ async function detectDisease(symptoms) {
 
 
 export async function diagnoseSystem(message) {
+	let message = message.toLowerCase();
 	let symptoms = await detectSymptoms(message);
 	// console.log(symptoms);
 
